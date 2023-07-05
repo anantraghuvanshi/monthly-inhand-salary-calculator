@@ -1,27 +1,34 @@
 <div>
   <form>
-    <label for="basePay">Base Pay:</label>
-    <input
-      type="number"
-      id="basePay"
-      name="basePay"
-      [(ngModel)]="basePay"
-    /><br /><br />
-    <label for="providentFund">Provident Fund:</label>
-    <input
-      type="number"
-      id="providentFund"
-      name="providentFund"
-      [(ngModel)]="providentFund"
-    /><br /><br />
-    <label for="taxRegime">Tax Regime:</label><br />
-    <input
-      type="radio"
-      id="old"
-      name="taxRegime"
-      value="old"
-      [(ngModel)]="taxRegime"
-    />
+    <div class="form-control">
+      <label for="basePay">Base Pay:</label>
+      <input
+        type="number"
+        id="basePay"
+        name="basePay"
+        [(ngModel)]="basePay"
+      /><br /><br />
+    </div>
+    <div class="form-control">
+      <label for="providentFund">Provident Fund:</label>
+      <input
+        type="number"
+        id="providentFund"
+        name="providentFund"
+        [(ngModel)]="providentFund"
+      /><br /><br />
+    </div>
+    <div class="form-control">
+      <label for="taxRegime">Tax Regime:</label><br />
+      <input
+        type="radio"
+        id="old"
+        name="taxRegime"
+        value="old"
+        [(ngModel)]="taxRegime"
+      />
+    </div>
+
     <label for="old">Old</label><br />
     <input
       type="radio"
@@ -30,11 +37,14 @@
       value="new"
       [(ngModel)]="taxRegime"
     />
+
     <label for="new">New</label><br /><br />
-    <button (click)="calculateTax()">Calculate Tax</button>
-    <button (click)="monthlySalary = calculateMonthlySalary()">
-      Calculate Monthly Salary
-    </button>
+    <div class="form-control">
+      <button (click)="calculateTax()">Calculate Tax</button>
+      <button (click)="monthlySalary = calculateMonthlySalary()">
+        Calculate Monthly Salary
+      </button>
+    </div>
   </form>
   <p *ngIf="monthlySalary">Monthly Salary: {{ monthlySalary }}</p>
   <p *ngIf="tax">Calculated Tax: {{ tax }}</p>
