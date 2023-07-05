@@ -46,6 +46,23 @@ export class SalaryCalculatorComponent implements OnInit {
   }
 
   calculateTaxNew(taxableSalary: number): number {
-    return taxableSalary * 0.3;
+    let tax = 0;
+    if (taxableSalary <= 250000) {
+      tax = 0;
+    } else if (taxableSalary <= 500000) {
+      tax = (taxableSalary - 250000) * 0.05;
+    } else if (taxableSalary <= 750000) {
+      tax = 12500 + (taxableSalary - 500000) * 0.1;
+    } else if (taxableSalary <= 1000000) {
+      tax = 37500 + (taxableSalary - 750000) * 0.15;
+    } else if (taxableSalary <= 1250000) {
+      tax = 75000 + (taxableSalary - 1000000) * 0.2;
+    } else if (taxableSalary <= 1500000) {
+      tax = 125000 + (taxableSalary - 1250000) * 0.25;
+    } else {
+      tax = 187500 + (taxableSalary - 1500000) * 0.3;
+    }
+
+    return tax;
   }
 }
