@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./salary-calculator-component.component.css'],
 })
 export class SalaryCalculatorComponent implements OnInit {
-  annualBaseSalary: number | undefined;
-  annualPf: number | undefined;
-  monthlyInHandSalary: number | undefined;
-  taxRegime: string | undefined;
+  annualBaseSalary!: number;
+  annualPf!: number;
+  monthlyInHandSalary!: number;
+  taxRegime!: string;
 
   constructor() {}
 
@@ -42,7 +42,7 @@ export class SalaryCalculatorComponent implements OnInit {
     return this.annualBaseSalary - tax - monthlyPf;
   }
 
-  calculateTaxOld(taxableSalary) {
+  calculateTaxOld(taxableSalary: number) {
     if (taxableSalary <= 250000) {
       return 0;
     } else if (taxableSalary <= 500000) {
