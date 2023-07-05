@@ -39,9 +39,14 @@
     />
 
     <label for="new">New</label><br /><br />
-    <div class="form-control">
-      <button (click)="calculateTax()">Calculate Tax</button>
-      <button (click)="monthlySalary = calculateMonthlySalary()">
+    <div class="text-box">
+      <button class="btn btn-white btn-animate" (click)="calculateTax()">
+        Calculate Tax
+      </button>
+      <button
+        class="btn btn-white btn-animate"
+        (click)="monthlySalary = calculateMonthlySalary()"
+      >
         Calculate Monthly Salary
       </button>
     </div>
