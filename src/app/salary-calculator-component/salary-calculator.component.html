@@ -31,7 +31,11 @@
       [(ngModel)]="taxRegime"
     />
     <label for="new">New</label><br /><br />
-    <button (click)="calculateTax()">Calculate</button>
+    <button (click)="calculateTax()">Calculate Tax</button>
+    <button (click)="monthlySalary = calculateMonthlySalary()">
+      Calculate Monthly Salary
+    </button>
   </form>
+  <p *ngIf="monthlySalary">Monthly Salary: {{ monthlySalary }}</p>
   <p *ngIf="tax">Calculated Tax: {{ tax }}</p>
 </div>

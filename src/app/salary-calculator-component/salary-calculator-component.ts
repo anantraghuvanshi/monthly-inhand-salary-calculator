@@ -11,6 +11,7 @@ export class SalaryCalculatorComponent implements OnInit {
   taxRegime!: string;
   tax!: number;
   basePay!: number;
+  monthlySalary!: number;
 
   constructor() {}
 
@@ -23,6 +24,11 @@ export class SalaryCalculatorComponent implements OnInit {
     } else {
       this.tax = this.calculateTaxNew(taxableSalary);
     }
+  }
+
+  calculateMonthlySalary() {
+    this.calculateTax();
+    return (this.basePay - this.providentFund - this.tax) / 12;
   }
 
   calculateTaxOld(taxableSalary: number): number {
