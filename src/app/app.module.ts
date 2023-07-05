@@ -3,10 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SalaryCalculatorComponentComponent } from './salary-calculator-component/salary-calculator-component';
+import { SalaryCalculatorComponent } from './salary-calculator-component/salary-calculator-component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  declarations: [AppComponent, SalaryCalculatorComponentComponent],
+  declarations: [AppComponent, SalaryCalculatorComponent, HeaderComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
