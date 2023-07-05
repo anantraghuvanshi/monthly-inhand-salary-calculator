@@ -15,6 +15,9 @@
     <label for="old-regime">Old Tax Regime</label>
     <input type="radio" id="new-regime" name="tax-regime" value="new" />
     <label for="new-regime">New Tax Regime</label>
-    <button class="btn btn-primary">Calculate</button>
+    <button class="btn btn-primary" onclick="calculateTax()">
+      Calculate Tax
+    </button>
+    <p>Tax: {{ tax }}</p>
   </form>
 </div>

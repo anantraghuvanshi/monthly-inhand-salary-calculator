@@ -6,11 +6,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./salary-calculator-component.css'],
 })
 export class SalaryCalculatorComponent implements OnInit {
+  taxableSalary!: number;
+  providentFund!: number;
+  taxRegime!: string;
+  tax!: number;
+  basePay!: number;
+
   constructor() {}
 
   ngOnInit() {}
 
-  calculateTaxOld(taxableSalary: number) {
+  calculateTax() {
+    const taxableSalary = this.basePay - this.providentFund;
+    if (this.taxRegime === 'old') {
+      this.tax = this.calculateTaxOld(taxableSalary);
+    } else {
+      this.tax = this.calculateTaxNew(taxableSalary);
+    }
+  }
+
+  calculateTaxOld(taxableSalary: number): number {
     if (taxableSalary <= 250000) {
       return 0;
     } else if (taxableSalary <= 500000) {
@@ -22,5 +37,9 @@ export class SalaryCalculatorComponent implements OnInit {
     } else {
       return 67500 + (taxableSalary - 1000000) * 0.15;
     }
+  }
+
+  calculateTaxNew(taxableSalary: number): number {
+    return taxableSalary * 0.3;
   }
 }
