@@ -1,16 +1,37 @@
-<h2>Salary Calculator</h2>
-
-<form (ngSubmit)="calculateTax()">
-  <input type="number" [(ngModel)]="basePay" placeholder="Base Pay" />
-  <input
-    type="number"
-    [(ngModel)]="providentFund"
-    placeholder="Provident Fund"
-  />
-  <select [(ngModel)]="taxRegime">
-    <option value="old">Old Tax Regime</option>
-    <option value="new">New Tax Regime</option>
-  </select>
-  <button type="submit">Calculate</button>
-  <p>Tax: {{ tax }}</p>
-</form>
+<div>
+  <form>
+    <label for="basePay">Base Pay:</label>
+    <input
+      type="number"
+      id="basePay"
+      name="basePay"
+      [(ngModel)]="basePay"
+    /><br /><br />
+    <label for="providentFund">Provident Fund:</label>
+    <input
+      type="number"
+      id="providentFund"
+      name="providentFund"
+      [(ngModel)]="providentFund"
+    /><br /><br />
+    <label for="taxRegime">Tax Regime:</label><br />
+    <input
+      type="radio"
+      id="old"
+      name="taxRegime"
+      value="old"
+      [(ngModel)]="taxRegime"
+    />
+    <label for="old">Old</label><br />
+    <input
+      type="radio"
+      id="new"
+      name="taxRegime"
+      value="new"
+      [(ngModel)]="taxRegime"
+    />
+    <label for="new">New</label><br /><br />
+    <button (click)="calculateTax()">Calculate</button>
+  </form>
+  <p *ngIf="tax">Calculated Tax: {{ tax }}</p>
+</div>
