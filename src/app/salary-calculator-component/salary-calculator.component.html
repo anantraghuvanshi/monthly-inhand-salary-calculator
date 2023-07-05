@@ -1,31 +1,16 @@
-<link
-  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-  rel="stylesheet"
-  integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-  crossorigin="anonymous"
-/>
-<app-header></app-header>
-<div class="card mb-5">
-  <form>
-    <div class="form-group">
-      <label for="base-pay">Annual Base Pay:</label>
-      <input type="number" id="base-pay" name="base-pay" />
-    </div>
-    <div class="form-group">
-      <label for="provident-fund">Annual Provident Fund:</label>
-      <input type="number" id="provident-fund" name="provident-fund" />
-    </div>
-    <div class="form-group">
-      <input type="radio" id="old-regime" name="tax-regime" value="old" />
-      <label for="old-regime">Old Tax Regime</label>
-    </div>
-    <div class="form-group">
-      <input type="radio" id="new-regime" name="tax-regime" value="new" />
-      <label for="new-regime">New Tax Regime</label>
-    </div>
-    <button class="btn btn-primary" onclick="calculateTax()">
-      Calculate Tax
-    </button>
-    <p>Tax: {{ tax }}</p>
-  </form>
-</div>
+<h2>Salary Calculator</h2>
+
+<form (ngSubmit)="calculateTax()">
+  <input type="number" [(ngModel)]="basePay" placeholder="Base Pay" />
+  <input
+    type="number"
+    [(ngModel)]="providentFund"
+    placeholder="Provident Fund"
+  />
+  <select [(ngModel)]="taxRegime">
+    <option value="old">Old Tax Regime</option>
+    <option value="new">New Tax Regime</option>
+  </select>
+  <button type="submit">Calculate</button>
+  <p>Tax: {{ tax }}</p>
+</form>
