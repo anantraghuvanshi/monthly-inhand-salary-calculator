@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-salary-calculator',
-  templateUrl: './salary-calculator.component.html',
-  styleUrls: ['./salary-calculator.component.css'],
+  templateUrl: './salary-calculator-component.component.html',
+  styleUrls: ['./salary-calculator-component.component.css'],
 })
 export class SalaryCalculatorComponent implements OnInit {
-  annualBaseSalary: number;
-  annualPf: number;
-  monthlyInHandSalary: number;
-  taxRegime: string;
+  annualBaseSalary: number | undefined;
+  annualPf: number | undefined;
+  monthlyInHandSalary: number | undefined;
+  taxRegime: string | undefined;
 
   constructor() {}
 
