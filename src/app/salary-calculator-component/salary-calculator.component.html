@@ -1,3 +1,20 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+  crossorigin="anonymous"
+/>
 <app-header></app-header>
-<h1>Hello Vishwa</h1>
+<div class="card mb-5">
+  <form action="">
+    <label for="base-pay">Annual Base Pay:</label>
+    <input type="number" id="base-pay" name="base-pay" />
+    <label for="provident-fund">Annual Provident Fund:</label>
+    <input type="number" id="provident-fund" name="provident-fund" />
+    <input type="radio" id="old-regime" name="tax-regime" value="old" />
+    <label for="old-regime">Old Tax Regime</label>
+    <input type="radio" id="new-regime" name="tax-regime" value="new" />
+    <label for="new-regime">New Tax Regime</label>
+    <button class="btn btn-primary">Calculate</button>
+  </form>
+</div>
