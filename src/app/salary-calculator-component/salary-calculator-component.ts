@@ -13,16 +13,9 @@ export class SalaryCalculatorComponent implements OnInit {
   basePay!: number;
   monthlySalary!: number;
 
-  userName: string | null = '';
-
   constructor() {}
 
-  ngOnInit() {
-    this.userName = localStorage.getItem('userName');
-    if (!this.userName) {
-      this.userName = 'Guest';
-    }
-  }
+  ngOnInit() {}
 
   calculateTax() {
     const taxableSalary = this.basePay - this.providentFund;
