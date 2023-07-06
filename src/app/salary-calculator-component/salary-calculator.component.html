@@ -22,23 +22,21 @@
       <label for="taxRegime">Tax Regime:</label><br />
       <input
         type="radio"
-        id="old"
         name="taxRegime"
         value="old"
+        id="old"
         [(ngModel)]="taxRegime"
       />
+      <label for="old">Old</label>
+      <input
+        type="radio"
+        name="taxRegime"
+        value="new"
+        id="new"
+        [(ngModel)]="taxRegime"
+      />
+      <label for="new">New</label>
     </div>
-
-    <label for="old">Old</label><br />
-    <input
-      type="radio"
-      id="new"
-      name="taxRegime"
-      value="new"
-      [(ngModel)]="taxRegime"
-    />
-
-    <label for="new">New</label><br /><br />
     <div class="text-box">
       <button class="btn btn-white btn-animate" (click)="calculateTax()">
         Calculate Tax
