@@ -6,10 +6,15 @@ import { AppComponent } from './app.component';
 import { SalaryCalculatorComponent } from './salary-calculator-component/salary-calculator-component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
-import { WelcomePageComponent } from './welcome-page/welcome-page.component';
+import { WelcomeComponent } from './welcome-page/welcome-page.component';
 
 @NgModule({
-  declarations: [AppComponent, SalaryCalculatorComponent, HeaderComponent, WelcomePageComponent],
+  declarations: [
+    AppComponent,
+    SalaryCalculatorComponent,
+    HeaderComponent,
+    WelcomeComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
