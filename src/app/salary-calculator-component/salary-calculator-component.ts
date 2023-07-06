@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { WelcomeComponent } from '../welcome-page/welcome-page.component';
 
 @Component({
   selector: 'app-salary-calculator',
@@ -13,9 +15,12 @@ export class SalaryCalculatorComponent implements OnInit {
   basePay!: number;
   monthlySalary!: number;
 
-  constructor() {}
+  constructor(private router: Router, public welcome: WelcomeComponent) {}
 
   ngOnInit() {}
+  goToSalaryCalculator() {
+    this.router.navigate(['salary-calculator']);
+  }
 
   calculateTax() {
     const taxableSalary = this.basePay - this.providentFund;

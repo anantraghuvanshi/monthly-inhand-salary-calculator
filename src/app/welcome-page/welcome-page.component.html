@@ -1,1 +1,13 @@
-<p>welcome-page works!</p>
+<div class="card">
+  <h1>Welcome!</h1>
+  <p>Please enter your name:</p>
+  <input
+    type="text"
+    id="userName"
+    [(ngModel)]="userName"
+    placeholder="Enter your name"
+  />
+  <button class="btn btn-white btn-animate" (click)="goToSalaryCalculator()">
+    Continue
+  </button>
+</div>
