@@ -18,9 +18,6 @@ export class SalaryCalculatorComponent implements OnInit {
   constructor(private router: Router, public welcome: WelcomeComponent) {}
 
   ngOnInit() {}
-  goToSalaryCalculator() {
-    this.router.navigate(['salary-calculator']);
-  }
 
   calculateTax() {
     const taxableSalary = this.basePay - this.providentFund;
