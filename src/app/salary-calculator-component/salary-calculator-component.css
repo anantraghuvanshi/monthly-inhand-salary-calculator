@@ -10,6 +10,9 @@
 .form-control {
   margin-bottom: 10px;
 }
+.form-control-taxRegime{
+  width: 50%;
+}
 
 .label {
   font-weight: bold;
