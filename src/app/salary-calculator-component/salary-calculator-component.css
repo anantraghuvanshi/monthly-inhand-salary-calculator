@@ -1,46 +1,77 @@
 .card {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 10px;
-  justify-content: center;
-  align-items: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 10px auto;
+  align-self: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
 }
 
 .form-control {
   margin-bottom: 10px;
 }
 
-.label {
+label {
   font-weight: bold;
 }
 
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="radio"] {
+  margin-top: auto;
+  margin-right: 7px;
+  margin-left: 10px;
+}
+
 .text-box {
-  text-align: center;
+  margin-top: 10px;
 }
 
 .btn {
-  background-color: #007bff;
-  color: white;
+  display: inline-block;
+  background-color: #4caf50;
+  color: #fff;
+  margin-left: 5px;
   border: none;
-  padding: 10px 20px;
+  padding: 5px 10px;
   font-size: 16px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-  background-color: #0056b3;
+.btn-white {
+  background-color: #fff;
+  color: #4caf50;
+  border: 1px solid #4caf50;
 }
 
-.btn-animate {
-  animation: swing 1s infinite;
+.btn-animate:hover {
+  color: #0d5ff6;
+  background-color: #7ebff9;
 }
 
-.btn {
-  margin-right: 10px;
+p {
+  font-size: 16px;
+  font-weight: bold;
 }
 .radio-group .radio {
   margin-right: 30px;
 }
 
+@media (max-width: 500px) {
+  .card {
+    max-width: 100%;
+  }
+}

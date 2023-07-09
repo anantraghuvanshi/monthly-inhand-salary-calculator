@@ -5,7 +5,7 @@ import { SalaryCalculatorComponent } from './salary-calculator-component/salary-
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
-  { path: 'salary-calculator', component: SalaryCalculatorComponent },
+  { path: 'salaryCalculator', component: SalaryCalculatorComponent },
 ];
 
 @NgModule({

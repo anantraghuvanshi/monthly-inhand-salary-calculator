@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { WelcomeComponent } from '../welcome-page/welcome-page.component';
 
 @Component({
@@ -14,10 +14,19 @@ export class SalaryCalculatorComponent implements OnInit {
   tax!: number;
   basePay!: number;
   monthlySalary!: number;
+  userName: string | null = '';
 
-  constructor(private router: Router, public welcome: WelcomeComponent) {}
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    public welcome: WelcomeComponent
+  ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.route.queryParams.subscribe((params) => {
+      this.userName = params['userName'] || '';
+    });
+  }
 
   calculateTax() {
     const taxableSalary = this.basePay - this.providentFund;

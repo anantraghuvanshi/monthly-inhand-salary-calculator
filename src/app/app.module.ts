@@ -7,7 +7,7 @@ import { SalaryCalculatorComponent } from './salary-calculator-component/salary-
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { WelcomeComponent } from './welcome-page/welcome-page.component';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -16,12 +16,8 @@ import { RouterModule } from '@angular/router';
     HeaderComponent,
     WelcomeComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    RouterModule.forRoot([]),
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, RouterModule],
+  exports: [RouterModule],
   providers: [{ provide: WelcomeComponent, useClass: WelcomeComponent }],
   bootstrap: [AppComponent],
 })
