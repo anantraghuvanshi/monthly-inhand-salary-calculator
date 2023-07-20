@@ -1,46 +1,98 @@
+/* Add this CSS to your existing styles.css or create a new CSS file and link it to your HTML */
+
 .card {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 10px;
-  justify-content: center;
-  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f6f6f6;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+form {
+  margin-bottom: 30px;
 }
 
 .form-control {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
-.label {
+label {
+  display: block;
   font-weight: bold;
+  color: #666;
 }
 
-.text-box {
-  text-align: center;
+input[type="number"],
+input[type="radio"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
+/* Add some catchy colors to the buttons */
 .btn {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 12px 10px;
+  border-radius: 10px;
+  font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-  background-color: #0056b3;
+/* Add a pulsing animation to the buttons */
+@keyframes btnPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn-white {
+  color: #fff;
+  background-color: #3498db;
+}
+
+.btn-white:hover {
+  background-color: #2980b9;
 }
 
 .btn-animate {
-  animation: swing 1s infinite;
+  animation: btnPulse 1.5s infinite;
 }
 
-.btn {
+.text-box {
+  display: flex;
+  justify-content: space-between;
+  /* Add some margin between the buttons */
+  margin-top: 20px;
+}
+
+/* Properly align the labels for tax regime options */
+.form-control label {
+  display: inline-block;
+  vertical-align: middle;
   margin-right: 10px;
 }
-.radio-group .radio {
-  margin-right: 30px;
-}
 
+/* Show the monthlySalary and tax paragraphs when there's content */
+p[ngIf] {
+  color: #333;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 20px;
+}
