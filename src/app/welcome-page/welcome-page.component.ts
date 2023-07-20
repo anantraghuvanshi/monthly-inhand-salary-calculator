@@ -19,6 +19,11 @@ export class WelcomeComponent implements OnInit {
   }
 
   goToSalaryCalculator() {
-    this.router.navigate(['salary-calculator', this.userName]);
+    const button = document.querySelector('button');
+    if (button) {
+      button.addEventListener('click', () => {
+        this.router.navigate(['salary-calculator', this.userName]);
+      });
+    }
   }
 }
