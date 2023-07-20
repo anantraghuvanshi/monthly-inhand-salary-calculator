@@ -19,6 +19,6 @@ export class WelcomeComponent implements OnInit {
   }
 
   goToSalaryCalculator() {
-    this.router.navigate(['salary-calculator']);
+    this.router.navigate(['salary-calculator', this.userName]);
   }
 }
