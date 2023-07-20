@@ -1,17 +1,24 @@
-<div class="welcome-container">
-  <div class="floating-text" id="floatingText">
-    Welcome to Monthly Inhand Salary Calculator
-  </div>
-  <div class="input-box" id="inputBox">
-    <p>Please enter your name:</p>
-    <input
-      type="text"
-      id="userName"
-      [(ngModel)]="userName"
-      placeholder="Enter your name"
-    />
-    <button class="btn btn-white btn-animate" (click)="goToSalaryCalculator()">
-      Continue
-    </button>
+<div class="background">
+  <div class="container welcome-container">
+    <div class="jumbotron">
+      <h1 class="display-4 floating-text" id="floatingText">
+        Welcome to Monthly Inhand Salary Calculator
+      </h1>
+    </div>
+    <div class="input-box" id="inputBox">
+      <p>Please enter your name:</p>
+      <input
+        type="text"
+        id="userName"
+        [(ngModel)]="userName"
+        placeholder="Enter your name"
+      />
+      <button
+        class="btn btn-primary btn-lg btn-animate"
+        (click)="goToSalaryCalculator()"
+      >
+        Continue
+      </button>
+    </div>
   </div>
 </div>
