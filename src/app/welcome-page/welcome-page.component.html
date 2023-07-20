@@ -1,13 +1,17 @@
-<div class="card">
-  <h1>Welcome!</h1>
-  <p>Please enter your name:</p>
-  <input
-    type="text"
-    id="userName"
-    [(ngModel)]="userName"
-    placeholder="Enter your name"
-  />
-  <button class="btn btn-white btn-animate" (click)="goToSalaryCalculator()">
-    Continue
-  </button>
+<div class="welcome-container">
+  <div class="floating-text" id="floatingText">
+    Welcome to Monthly Inhand Salary Calculator
+  </div>
+  <div class="input-box" id="inputBox">
+    <p>Please enter your name:</p>
+    <input
+      type="text"
+      id="userName"
+      [(ngModel)]="userName"
+      placeholder="Enter your name"
+    />
+    <button class="btn btn-white btn-animate" (click)="goToSalaryCalculator()">
+      Continue
+    </button>
+  </div>
 </div>

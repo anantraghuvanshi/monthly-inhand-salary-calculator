@@ -7,19 +7,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./welcome-page.component.css'],
 })
 export class WelcomeComponent implements OnInit {
-  userName: string = ''; // Set a default value to ensure it's always a string
+  userName: string = '';
 
   constructor(private router: Router) {}
 
   ngOnInit() {
-    this.userName = localStorage.getItem('userName') || 'Guest'; // Use a default value if userName is null
+    this.userName = localStorage.getItem('userName') || 'Guest';
   }
 
   goToSalaryCalculator() {
-    // Save the user name in localStorage
     localStorage.setItem('userName', this.userName);
-
-    // Navigate to the Salary Calculator page
     this.router.navigate(['salary-calculator']);
   }
 }
