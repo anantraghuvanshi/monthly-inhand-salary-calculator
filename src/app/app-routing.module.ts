@@ -4,7 +4,7 @@ import { WelcomeComponent } from './welcome-page/welcome-page.component';
 import { SalaryCalculatorComponent } from './salary-calculator-component/salary-calculator-component';
 
 const routes: Routes = [
-  { path: '', component: WelcomeComponent },
+  { path: '', component: WelcomeComponent }, // Default route to the WelcomeComponent
   { path: 'salary-calculator', component: SalaryCalculatorComponent },
 ];
 

@@ -15,7 +15,7 @@ export class SalaryCalculatorComponent implements OnInit {
   basePay!: number;
   monthlySalary!: number;
 
-  constructor(private router: Router, public welcome: WelcomeComponent) {}
+  constructor(private router: Router, public welcomePage: WelcomeComponent) {}
 
   ngOnInit() {}
 
