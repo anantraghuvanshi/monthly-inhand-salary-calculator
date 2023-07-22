@@ -1,0 +1,31 @@
+.footer {
+    background-color: #ffffff;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .text-muted {
+    color: #888;
+  }
+  
+  .list-inline {
+    display: flex;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .list-inline-item {
+    margin-right: 10px;
+  }
+  
+  .fa {
+    font-size: 20px;
+    color: black;
+    margin: 0 5px;
+  }
+  
