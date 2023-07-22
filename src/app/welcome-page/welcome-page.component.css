@@ -1,98 +1,60 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f6f6f6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+.card {
+  background-color: #ffffff;
+  margin: 0 auto;
+  width: 400px;
+  padding: 20px;
+  border-radius: 5px;
 }
 
-.container {
+h1 {
   text-align: center;
-  opacity: 0;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-.container.show {
-  animation: fadeIn 1s forwards;
+p {
+  margin-bottom: 10px;
 }
 
 .floating-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 30px;
-  font-weight: bold;
-  color: #3498db;
-  margin-bottom: 20px;
+  color: #ffffff;
+  text-align: center;
+  z-index: 100;
 }
 
 .input-box {
   display: none;
+  animation: fadein 1s;
 }
 
-.input-box.show {
-  animation: showInputBox 1s forwards 1s; /* Delay the animation by 1 second */
-}
-
-.form-control {
-  margin-bottom: 15px;
-}
-
-label {
-  display: block;
-  font-weight: bold;
-  color: #666;
-}
-
-input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  color: #333;
-}
-
-.btn {
-  padding: 12px 20px;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn-white {
-  color: #fff;
-  background-color: #3498db;
-}
-
-.btn-white:hover {
-  background-color: #2980b9;
-}
-
-.btn-animate {
-  animation: btnPulse 1.5s infinite;
-}
-
-@keyframes btnPulse {
-  0% {
-    transform: scale(1);
+@keyframes fadein {
+  from {
+    opacity: 0;
   }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes fadeIn {
   to {
     opacity: 1;
   }
 }
 
-@keyframes showInputBox {
-  to {
-    display: block;
+@media (max-width: 500px) {
+  .card {
+    width: 100%;
   }
+}
+
+.btn-white {
+  background-color: #ffffff;
+  color: #007bff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.btn-animate {
+  animation: fadein 1s;
 }
