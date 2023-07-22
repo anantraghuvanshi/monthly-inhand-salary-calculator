@@ -8,7 +8,7 @@
     animation: wave 3s ease-in-out infinite;
     position: relative;
     bottom: 0;
-    max-height: 200px;
+    max-height: 150px;
   }
   
   @keyframes wave {
