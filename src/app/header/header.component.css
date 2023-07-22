@@ -1,45 +1,44 @@
 /* Add any custom styles for the header here */
 header {
-    background-color: #f8f9fa;
-    padding: 10px 0;
+  background-color: #f8f9fa;
+  padding: 10px 0;
+}
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #333;
+}
+
+.nav-item {
+  margin-left: 10px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  color: #333;
+}
+
+.github-icon {
+  width: 24px;
+  height: 24px;
+  background-image: url('https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png');
+  background-size: cover;
+  margin-right: 5px;
+}
+
+.star-count {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+/* Media query for responsiveness - adjust as needed */
+@media (max-width: 768px) {
+  .navbar-collapse {
+    justify-content: flex-end;
   }
-  
-  .navbar {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .navbar-brand {
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .nav-item {
-    margin-left: 10px;
-  }
-  
-  .nav-link {
-    display: flex;
-    align-items: center;
-    color: #333;
-  }
-  
-  .github-icon {
-    width: 24px;
-    height: 24px;
-    background-image: url('https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png');
-    background-size: cover;
-    margin-right: 5px;
-  }
-  
-  .star-count {
-    font-weight: bold;
-    margin-left: 5px;
-  }
-  
-  /* Media query for responsiveness - adjust as needed */
-  @media (max-width: 768px) {
-    .navbar-collapse {
-      justify-content: flex-end;
-    }
-  }
-  
+}

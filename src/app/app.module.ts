@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { WelcomeComponent } from './welcome-page/welcome-page.component';
 import { RouterModule } from '@angular/router';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { RouterModule } from '@angular/router';
     SalaryCalculatorComponent,
     HeaderComponent,
     WelcomeComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
