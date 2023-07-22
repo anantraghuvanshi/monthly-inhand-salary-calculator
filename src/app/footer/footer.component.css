@@ -3,10 +3,12 @@
     padding: 20px;
     border-top: 1px solid #ccc;
     text-align: center;
-    margin-top: 20px;
+    margin: auto;
     background-image: linear-gradient(to bottom, #d3e0f3, #b3d3f9, #93c7ff);
     animation: wave 3s ease-in-out infinite;
-    height: 100vh;
+    position: relative;
+    bottom: 0;
+    max-height: 200px;
   }
   
   @keyframes wave {
@@ -41,7 +43,11 @@
   
   .fa {
     font-size: 20px;
-    color: black;
+    color: #93c7ff;
     margin: 0 5px;
+  }
+  
+  .fa-heart {
+    color: #0082FF;
   }
   
