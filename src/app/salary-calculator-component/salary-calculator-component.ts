@@ -31,7 +31,7 @@ export class SalaryCalculatorComponent implements OnInit {
     this.monthlySalary = (this.basePay - this.providentFund - this.tax) / 12;
     this.salaryMessage = `${
       this.userName
-    }, your Monthly Salary is: ${Math.round(this.monthlySalary)}`; // rounding to nearest integer
+    }, your Monthly Salary is: ${Math.round(this.monthlySalary)}`;
   }
 
   calculateTax() {
@@ -43,7 +43,7 @@ export class SalaryCalculatorComponent implements OnInit {
     }
     this.taxMessage = `${this.userName}, your calculated tax is: ${Math.round(
       this.tax
-    )}`; // This will update taxMessage after tax is calculated
+    )}`;
   }
 
   calculateTaxOld(taxableSalary: number): number {
