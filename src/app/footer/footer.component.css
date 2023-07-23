@@ -1,15 +1,17 @@
 .footer {
-    background-color: #ffffff;
-    padding: 20px;
-    border-top: 1px solid #ccc;
-    text-align: center;
-    margin: 20px auto;
-    background-image: linear-gradient(to bottom, #d3e0f3, #b3d3f9, #93c7ff);
-    animation: wave 3s ease-in-out infinite;
-    position: relative;
-    bottom: 0;
-    max-height: 150px;
-  }
+  flex-shrink: 0;
+  flex-grow: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  margin:20px 0 auto;
+  background-image: linear-gradient(to bottom, #d3e0f3, #b3d3f9, #93c7ff);
+  animation: wave 3s ease-in-out infinite;
+  position: relative;
+  bottom: 0;
+  height: 240px;
+}
   
   @keyframes wave {
     0% {
