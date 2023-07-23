@@ -1,6 +1,6 @@
 <app-header></app-header>
 <div class="card">
-  <h1>Salary Calculator</h1>
+  <h1>SALARY CALCULATOR</h1>
   <form>
     <div class="form-control">
       <label for="basePay"
@@ -46,7 +46,13 @@
     </div>
 
     <div class="form-control">
-      <label for="taxRegime">Tax Regime:</label>
+      <label for="taxRegime"
+        >Tax Regime:
+        <i
+          class="fa fa-info-circle"
+          (click)="openDialog('Tax Regime Info...')"
+        ></i>
+      </label>
       <input
         type="radio"
         name="taxRegime"
