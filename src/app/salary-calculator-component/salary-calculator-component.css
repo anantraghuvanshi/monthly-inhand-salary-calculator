@@ -103,3 +103,21 @@ p[ngIf] {
   text-align: center;
   margin-top: 20px;
 }
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow the elements to wrap */
+}
+
+.result-container {
+  width: 100%; /* Take the full width */
+  text-align: center; /* Center align the text */
+  margin-top: 10px;
+}
+
+.result-message {
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+}
+

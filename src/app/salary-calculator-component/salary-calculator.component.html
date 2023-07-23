@@ -1,7 +1,6 @@
 <app-header></app-header>
 <div class="card">
   <h1>Salary Calculator</h1>
-  <p>Your name is: {{ userName }}</p>
   <form>
     <div class="form-control">
       <label for="basePay">Base Pay:</label>
@@ -29,6 +28,7 @@
         value="old"
         id="old"
         [(ngModel)]="taxRegime"
+        (change)="resetOutput()"
       />
       <label for="old">Old </label>
       <input
@@ -37,22 +37,32 @@
         value="new"
         id="new"
         [(ngModel)]="taxRegime"
+        (change)="resetOutput()"
       />
       <label for="new">New </label>
     </div>
-    <div class="text-box">
-      <button class="btn btn-white btn-animate" (click)="calculateTax()">
-        Calculate Tax
-      </button>
+
+    <div class="button-container">
       <button
         class="btn btn-white btn-animate"
-        (click)="monthlySalary = calculateMonthlySalary()"
+        (click)="calculateTax(); $event.preventDefault()"
+      >
+        Calculate Tax
+      </button>
+      <div class="result-container">
+        <p *ngIf="taxMessage" class="result-message">{{ taxMessage }}</p>
+      </div>
+
+      <button
+        class="btn btn-white btn-animate"
+        (click)="calculateMonthlySalary(); $event.preventDefault()"
       >
         Calculate Monthly Salary
       </button>
+      <div class="result-container">
+        <p *ngIf="salaryMessage" class="result-message">{{ salaryMessage }}</p>
+      </div>
     </div>
   </form>
-  <p *ngIf="monthlySalary">Monthly Salary: {{ monthlySalary }}</p>
-  <p *ngIf="tax">Calculated Tax: {{ tax }}</p>
 </div>
 <app-footer></app-footer>
