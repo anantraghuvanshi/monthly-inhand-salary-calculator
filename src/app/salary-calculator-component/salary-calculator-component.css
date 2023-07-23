@@ -1,48 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 .card {
-  max-width: 400px;
-  margin: 20px auto;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  background: #d3e0f3;
+  background-image: linear-gradient(to bottom, #d3e0f3, #b3d3f9, #93c7ff);
+  color: #3A7BD5;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 h1 {
-  color: #333;
+  font-size: 32px;
+  font-weight: 700;
   text-align: center;
-  font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 form {
-  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .form-control {
-  margin-bottom: 15px;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  background:#5392f8;
+  border: #333;
+  border-radius: 12px;
 }
 
-label {
-  display: block;
-  font-weight: bold;
-  color: #666;
-}
-
-input[type="number"],
-input[type="radio"] {
+input[type="number"] {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 5px;
-  background-color: #f9f9f9;
+  background: #E8F0FE; 
   color: #333;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform .3s ease;
 }
+
+input[type="number"]:focus {
+  outline: none;
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  color: #062a5e;
+  font-weight: 500;
+  transition: color .3s ease;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+input[type="radio"]:checked + label {
+  color: #ffffff;
+  background-color: #535966;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
 .btn {
-  padding: 12px 10px;
-  border-radius: 10px;
+  padding: 12px 20px;
+  border-radius: 100px;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  background-color: #000000;
+  color: #fff;
+  animation: btnPulse 1.5s infinite;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.btn:hover {
+  background-color: #5392f8;
 }
 
 @keyframes btnPulse {
@@ -57,59 +113,14 @@ input[type="radio"] {
   }
 }
 
-.btn-white {
-  color: #fff;
-  background-color: #3498db;
-}
-
-.btn-white:hover {
-  background-color: #2980b9;
-}
-
-.btn-animate {
-  animation: btnPulse 1.5s infinite;
-}
-
-.text-box {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-.form-control label {
-  display: inline-block;
-  font-weight: bold;
-  color: #666;
-  margin-right: 10px;
-}
-.form-control input[type="radio"] {
-  display: inline-block;
-  width: auto;
-  vertical-align: middle;
-  margin: 0 5px 0 0; 
-}
-
-p[ngIf] {
-  color: #333;
-  font-size: 16px;
-  text-align: center;
-  margin-top: 20px;
-}
-.button-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; 
-}
-
 .result-container {
   width: 100%;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 1rem;
 }
 
 .result-message {
-  color: #333;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
+  color: #333;
 }
-

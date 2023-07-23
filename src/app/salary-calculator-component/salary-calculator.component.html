@@ -4,12 +4,7 @@
   <form>
     <div class="form-control">
       <label for="basePay">Base Pay:</label>
-      <input
-        type="number"
-        id="basePay"
-        name="basePay"
-        [(ngModel)]="basePay"
-      /><br /><br />
+      <input type="number" id="basePay" name="basePay" [(ngModel)]="basePay" />
     </div>
     <div class="form-control">
       <label for="providentFund">Provident Fund:</label>
@@ -18,10 +13,10 @@
         id="providentFund"
         name="providentFund"
         [(ngModel)]="providentFund"
-      /><br /><br />
+      />
     </div>
     <div class="form-control">
-      <label for="taxRegime">Tax Regime:</label><br />
+      <label for="taxRegime">Tax Regime:</label>
       <input
         type="radio"
         name="taxRegime"
@@ -30,7 +25,7 @@
         [(ngModel)]="taxRegime"
         (change)="resetOutput()"
       />
-      <label for="old">Old </label>
+      <label for="old">Old</label>
       <input
         type="radio"
         name="taxRegime"
@@ -39,29 +34,24 @@
         [(ngModel)]="taxRegime"
         (change)="resetOutput()"
       />
-      <label for="new">New </label>
+      <label for="new">New</label>
     </div>
 
     <div class="button-container">
-      <button
-        class="btn btn-white btn-animate"
-        (click)="calculateTax(); $event.preventDefault()"
-      >
+      <button class="btn" (click)="calculateTax(); $event.preventDefault()">
         Calculate Tax
       </button>
-      <div class="result-container">
-        <p *ngIf="taxMessage" class="result-message">{{ taxMessage }}</p>
-      </div>
-
       <button
-        class="btn btn-white btn-animate"
+        class="btn"
         (click)="calculateMonthlySalary(); $event.preventDefault()"
       >
         Calculate Monthly Salary
       </button>
-      <div class="result-container">
-        <p *ngIf="salaryMessage" class="result-message">{{ salaryMessage }}</p>
-      </div>
+    </div>
+
+    <div class="result-container">
+      <p *ngIf="taxMessage" class="result-message">{{ taxMessage }}</p>
+      <p *ngIf="salaryMessage" class="result-message">{{ salaryMessage }}</p>
     </div>
   </form>
 </div>
