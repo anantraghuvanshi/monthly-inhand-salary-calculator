@@ -76,7 +76,6 @@ input[type="radio"]:checked + label {
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-
 .button-container {
   display: flex;
   justify-content: space-between;
@@ -124,3 +123,12 @@ input[type="radio"]:checked + label {
   font-weight: bold;
   color: #333;
 }
+.error-message {
+  color: #a50f15; /* Dark red color */
+  font-size: 12px;
+  margin-top: 5px;
+  text-align: right;
+  font-weight: bold;
+}
+
+

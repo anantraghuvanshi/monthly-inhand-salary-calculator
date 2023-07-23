@@ -4,8 +4,25 @@
   <form>
     <div class="form-control">
       <label for="basePay">Base Pay:</label>
-      <input type="number" id="basePay" name="basePay" [(ngModel)]="basePay" />
+      <input
+        type="number"
+        id="basePay"
+        name="basePay"
+        [(ngModel)]="basePay"
+        #basePayControl="ngModel"
+        required
+      />
+      <div
+        *ngIf="
+          basePayControl.invalid &&
+          (basePayControl.dirty || basePayControl.touched)
+        "
+        class="error-message"
+      >
+        Base pay is required.
+      </div>
     </div>
+
     <div class="form-control">
       <label for="providentFund">Provident Fund:</label>
       <input

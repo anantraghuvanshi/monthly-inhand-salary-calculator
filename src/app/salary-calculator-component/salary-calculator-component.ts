@@ -9,7 +9,7 @@ import { WelcomeComponent } from '../welcome-page/welcome-page.component';
 })
 export class SalaryCalculatorComponent implements OnInit {
   taxableSalary!: number;
-  providentFund!: number;
+  providentFund: number = 0;
   taxRegime!: string;
   tax!: number;
   basePay!: number;
@@ -28,6 +28,9 @@ export class SalaryCalculatorComponent implements OnInit {
   }
 
   calculateMonthlySalary() {
+    if (!this.basePay) {
+      return;
+    }
     this.monthlySalary = (this.basePay - this.providentFund - this.tax) / 12;
     this.salaryMessage = `${
       this.userName
@@ -35,6 +38,9 @@ export class SalaryCalculatorComponent implements OnInit {
   }
 
   calculateTax() {
+    if (!this.basePay) {
+      return;
+    }
     const taxableSalary = this.basePay - this.providentFund;
     if (this.taxRegime === 'old') {
       this.tax = this.calculateTaxOld(taxableSalary);
