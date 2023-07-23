@@ -1,42 +1,38 @@
-.header {
-    background-color: #d3e0f3;
-    padding: 20px;
-    border-bottom: 1px solid #ccc;
-    text-align: center;
-    margin-top: 20px;
-    background-image: linear-gradient(to bottom, #b3d3f9, #93c7ff);
-    animation: wave 3s ease-in-out infinite;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap'); /* Import Roboto font */
+
+.header, .navbar {
+  font-family: 'Roboto', sans-serif;
+  background-image: linear-gradient(to bottom, #d3e0f3, #b3d3f9, #93c7ff);
+  animation: wave 3s ease-in-out infinite;
+  border-bottom: 1px solid #ccc;
+}
+
+.navbar {
+  border-radius: 0;
+  box-shadow: none;
+}
   
+.navbar-brand {
+  color: #3A7BD5; /*  */
+  font-size: 20px;
+  font-weight: bold;
+}
   
-  .navbar {
-    background-color: #d3e0f3;
-    border-radius: 0;
-    box-shadow: none;
-  }
+.navbar-nav .nav-link {
+  color: #3A7BD5; /*  */
+  font-size: 16px;
+}
   
-  .navbar-brand {
-    color: #93c7ff;
-    font-size: 20px;
-    font-weight: bold;
-  }
+.navbar-nav .nav-link:hover {
+  color: #FFFFFF; /*  */
+}
   
-  .navbar-nav .nav-link {
-    color: #888;
-    font-size: 16px;
-  }
+.github-icon {
+  color: #3A7BD5; /*  */
+  font-size: 22px;
+}
   
-  .navbar-nav .nav-link:hover {
-    color: #93c7ff;
-  }
-  
-  .github-icon {
-    color: #93c7ff;
-    font-size: 22px;
-  }
-  
-  .star-count {
-    color: #93c7ff;
-    font-size: 16px;
-  }
-  
+.star-count {
+  color: #3A7BD5; /*  */
+  font-size: 16px;
+}

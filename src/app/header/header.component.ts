@@ -13,7 +13,6 @@ export class HeaderComponent implements OnInit {
   }
 
   fetchStarCount() {
-    // Fetch the star count from the GitHub API
     fetch(
       'https://api.github.com/repos/anantraghuvanshi/monthly-inhand-salary-calculator'
     )
