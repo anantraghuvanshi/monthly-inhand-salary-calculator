@@ -1,7 +1,7 @@
 <div @fadeInOut>
   <h2 mat-dialog-title>Information</h2>
   <div mat-dialog-content>
-    <p>{{ data.info }}</p>
+    <p [innerHTML]="data.info"></p>
   </div>
   <div mat-dialog-actions>
     <button mat-button (click)="dialogRef.close()">Close</button>

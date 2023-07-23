@@ -1,9 +1,10 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, Inject, ViewEncapsulation } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 export interface DialogData {
-  info: string;
+  info: SafeHtml;
 }
 
 @Component({
@@ -26,6 +27,11 @@ export interface DialogData {
 export class DialogComponentComponent {
   constructor(
     public dialogRef: MatDialogRef<DialogComponentComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData
-  ) {}
+    @Inject(MAT_DIALOG_DATA) public data: DialogData,
+    private sanitizer: DomSanitizer
+  ) {
+    this.data.info = sanitizer.bypassSecurityTrustHtml(
+      this.data.info as string
+    );
+  }
 }

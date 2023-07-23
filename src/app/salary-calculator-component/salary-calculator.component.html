@@ -7,7 +7,11 @@
         >Base Pay:
         <i
           class="fa fa-info-circle"
-          (click)="openDialog('Base Pay Info...')"
+          (click)="
+            openDialog(
+              '<p>Base pay refers to the initial rate of compensation</p> <p>an employee receives in exchange for services.<p>'
+            )
+          "
         ></i>
       </label>
       <input
