@@ -1,0 +1,43 @@
+h2 {
+    color: #3A7BD5;
+    text-align: center;
+}
+
+.mat-dialog-content {
+    background: #E8F0FE;
+    color: #333;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.1);
+    animation: scaleIn 0.5s ease-in-out;
+}
+
+.mat-dialog-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    color: #ffffff;
+    background-color: #3A7BD5;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
