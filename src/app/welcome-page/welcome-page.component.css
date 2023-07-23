@@ -1,60 +1,69 @@
-.card {
-  background-color: #ffffff;
-  margin: 20px auto;
-  width: 400px;
-  padding: 20px;
-  border-radius: 5px;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+.welcome-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  background: #d3e0f3;
+  background-image: linear-gradient(to bottom, #d3e0f3, #b3d3f9, #93c7ff);
 }
 
-h1 {
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-p {
-  margin-bottom: 10px;
-}
-
-.floating-text {
-  position: fixed;
-  top: 50%;
+.typing-text {
+  position: absolute;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 30px;
-  color: #ffffff;
-  text-align: center;
-  z-index: 100;
+  font-size: 32px;
+  font-weight: 700;
+  color: #3A7BD5;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0;
+  animation: typing 2.5s steps(48, end) forwards, fadeIn 2s 0.1s forwards; 
 }
 
-.input-box {
+@keyframes typing {
+  from { width: 0; }
+  to { width: 40ch; }
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.user-input {
   display: none;
-  animation: fadein 1s;
+  margin-top: 2rem;
 }
 
-@keyframes fadein {
+.user-input.visible {
+  display: block;
+  opacity: 0; 
+  transform: translateY(30px);
+  animation: slideIn 1s 1s forwards ease-in-out, fadeIn 1s 1s forwards ease-in-out;
+}
+
+@keyframes slideIn {
   from {
+    transform: translateY(30px);
     opacity: 0;
   }
-  to {
+  to { 
+    transform: translateY(0); 
     opacity: 1;
   }
 }
 
-@media (max-width: 500px) {
-  .card {
-    width: 100%;
-  }
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
-.btn-white {
-  background-color: #ffffff;
-  color: #007bff;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-top: 10px;
-}
-
-.btn-animate {
-  animation: fadein 1s;
+.form-control {
+  margin-bottom: 1rem;
 }

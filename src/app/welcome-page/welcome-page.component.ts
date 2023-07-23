@@ -13,6 +13,9 @@ export class WelcomeComponent implements OnInit {
 
   ngOnInit() {
     this.userName = localStorage.getItem('userName') || 'Guest';
+    setTimeout(() => {
+      document.getElementById('userInput')?.classList.add('visible');
+    }, 2000);
   }
 
   goToSalaryCalculator() {
