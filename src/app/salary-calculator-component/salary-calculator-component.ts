@@ -42,6 +42,9 @@ export class SalaryCalculatorComponent implements OnInit {
     if (!this.basePay) {
       return;
     }
+    if (this.tax === undefined) {
+      this.tax = 0;
+    }
     this.monthlySalary = (this.basePay - this.providentFund - this.tax) / 12;
     this.salaryMessage = `${
       this.userName
