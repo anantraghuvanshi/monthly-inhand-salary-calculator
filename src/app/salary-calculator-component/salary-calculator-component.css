@@ -130,5 +130,10 @@ input[type="radio"]:checked + label {
   text-align: right;
   font-weight: bold;
 }
+.fa-info-circle {
+  margin-left: 5px;
+  color: #3A7BD5;
+  cursor: pointer;
+}
 
 

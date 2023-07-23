@@ -9,6 +9,9 @@ import { FormsModule } from '@angular/forms';
 import { WelcomeComponent } from './welcome-page/welcome-page.component';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DialogComponentComponent } from './dialog-component/dialog-component.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -17,12 +20,15 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     WelcomeComponent,
     FooterComponent,
+    DialogComponentComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     RouterModule.forRoot([]),
+    BrowserAnimationsModule,
+    MatDialogModule,
   ],
   providers: [{ provide: WelcomeComponent, useClass: WelcomeComponent }],
   bootstrap: [AppComponent],

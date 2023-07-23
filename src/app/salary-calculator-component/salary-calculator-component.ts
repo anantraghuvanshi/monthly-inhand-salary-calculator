@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { WelcomeComponent } from '../welcome-page/welcome-page.component';
+import { DialogComponentComponent } from '../dialog-component/dialog-component.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-salary-calculator',
@@ -18,13 +20,22 @@ export class SalaryCalculatorComponent implements OnInit {
   taxMessage!: string | null;
   salaryMessage!: string | null;
 
-  constructor(private router: Router, public welcomePage: WelcomeComponent) {}
+  constructor(
+    private router: Router,
+    public welcomePage: WelcomeComponent,
+    public dialog: MatDialog
+  ) {}
 
   ngOnInit() {
     this.userName = localStorage.getItem('userName');
     if (!this.userName) {
       this.userName = 'Guest';
     }
+  }
+  openDialog(content: string): void {
+    const dialogRef = this.dialog.open(DialogComponentComponent, {
+      data: { info: content },
+    });
   }
 
   calculateMonthlySalary() {

@@ -3,7 +3,13 @@
   <h1>Salary Calculator</h1>
   <form>
     <div class="form-control">
-      <label for="basePay">Base Pay:</label>
+      <label for="basePay"
+        >Base Pay:
+        <i
+          class="fa fa-info-circle"
+          (click)="openDialog('Base Pay Info...')"
+        ></i>
+      </label>
       <input
         type="number"
         id="basePay"
@@ -24,7 +30,13 @@
     </div>
 
     <div class="form-control">
-      <label for="providentFund">Provident Fund:</label>
+      <label for="providentFund"
+        >Provident Fund:
+        <i
+          class="fa fa-info-circle"
+          (click)="openDialog('Provident Fund Info...')"
+        ></i>
+      </label>
       <input
         type="number"
         id="providentFund"
@@ -32,6 +44,7 @@
         [(ngModel)]="providentFund"
       />
     </div>
+
     <div class="form-control">
       <label for="taxRegime">Tax Regime:</label>
       <input
