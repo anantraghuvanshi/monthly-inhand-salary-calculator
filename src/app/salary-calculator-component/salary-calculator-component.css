@@ -85,8 +85,15 @@ input[type="radio"] {
 /* Properly align the labels for tax regime options */
 .form-control label {
   display: inline-block;
-  vertical-align: middle;
+  font-weight: bold;
+  color: #666;
   margin-right: 10px;
+}
+.form-control input[type="radio"] {
+  display: inline-block;
+  width: auto; /* Override the width set in the 'input' rule */
+  vertical-align: middle;
+  margin: 0 5px 0 0; /* Add some space between the radio button and the label */
 }
 
 /* Show the monthlySalary and tax paragraphs when there's content */
