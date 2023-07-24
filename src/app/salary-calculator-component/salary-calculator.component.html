@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="card">
   <h1>SALARY CALCULATOR</h1>
-  <form #form="ngForm">
+  <form>
     <div class="form-control">
       <label for="basePay"
         >Base Pay:
@@ -9,7 +9,7 @@
           class="fa fa-info-circle"
           (click)="
             openDialog(
-              '<p>Base pay refers to the initial rate of compensation</p> <p>an employee receives in exchange for services.<p>'
+              '<p>It is the core payment that the employee can expect to receive regularly</p><p> typically expressed as an hourly rate or as a monthly or annual salary.</p>'
             )
           "
         ></i>
@@ -44,7 +44,9 @@
         >Provident Fund:
         <i
           class="fa fa-info-circle"
-          (click)="openDialog('Provident Fund Info...')"
+          (click)="
+            openDialog('Do not forget to add Employer PF contribution as well')
+          "
         ></i>
       </label>
       <input
@@ -60,7 +62,19 @@
         >Tax Regime:
         <i
           class="fa fa-info-circle"
-          (click)="openDialog('Tax Regime Info...')"
+          (click)="
+            openDialog(
+              '<p>Old Tax Regime:
+
+          The old tax regime allows for various tax deductions and exemptions.
+          However, the tax rates under this regime are typically higher than in the new regime.</p>
+
+          <p>New Tax Regime:
+          
+          The new tax regime offers lower tax rates, but fewer deductions.
+          It is generally simpler due to the elimination of most deductions and exemptions.</p>'
+            )
+          "
         ></i>
       </label>
       <input
