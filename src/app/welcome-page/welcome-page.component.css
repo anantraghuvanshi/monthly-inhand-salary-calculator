@@ -14,8 +14,8 @@
 
 .typing-text {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 40%;
+  left: 55%;
   transform: translate(-50%, -50%);
   font-size: 32px;
   font-weight: 700;
@@ -70,12 +70,13 @@
 
 @media screen and (max-width: 600px) {
   .typing-text {
-    top: 40%;
-    font-size: 16px;
+    top: 43%;
+    left: 47%;
+    font-size: 22px;
     width: 90%;
     white-space: nowrap;
     text-align: center;
-    animation: typing 5s steps(60, end) forwards, fadeIn 2s 0.1s forwards;
+    animation: typing 4s steps(48, end) forwards, fadeIn 2s 0.1s forwards;
   }
   .user-input.visible {
     animation: slideIn 1s 1s forwards ease-in-out, fadeIn 1s 1s forwards ease-in-out;
@@ -86,7 +87,7 @@
   .typing-text {
     top: 44%;
     left: 59%;
-    font-size: 28px;
+    font-size: 35px;
     animation: typing 2s steps(48, end) forwards, fadeIn 2s 0.1s forwards;
   }
   .user-input.visible {
