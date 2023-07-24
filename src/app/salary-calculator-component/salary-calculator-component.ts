@@ -46,11 +46,11 @@ export class SalaryCalculatorComponent implements OnInit {
   }
 
   calculateMonthlySalary() {
-    this.taxRegimeError = null;
-
     if (!this.taxRegime) {
       this.taxRegimeError = 'Tax regime is required.';
       return;
+    } else {
+      this.taxRegimeError = '';
     }
 
     if (!this.basePay) {
@@ -69,11 +69,11 @@ export class SalaryCalculatorComponent implements OnInit {
   }
 
   calculateTax() {
-    this.taxRegimeError = null;
-
     if (!this.taxRegime) {
       this.taxRegimeError = 'Tax regime is required.';
       return;
+    } else {
+      this.taxRegimeError = '';
     }
 
     if (!this.basePay) {
@@ -92,6 +92,11 @@ export class SalaryCalculatorComponent implements OnInit {
       this.tax
     )}`;
     this.openOutputDialog(this.taxMessage);
+  }
+  checkTaxRegime() {
+    if (this.taxRegime) {
+      this.taxRegimeError = null;
+    }
   }
 
   calculateTaxOld(taxableSalary: number): number {

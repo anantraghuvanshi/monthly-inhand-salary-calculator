@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="card">
   <h1>SALARY CALCULATOR</h1>
-  <form>
+  <form #form="ngForm">
     <div class="form-control">
       <label for="basePay"
         >Base Pay:
@@ -70,6 +70,7 @@
         id="old"
         [(ngModel)]="taxRegime"
         (change)="resetOutput()"
+        (ngModelChange)="checkTaxRegime()"
         #oldTaxRegime="ngModel"
       />
       <label for="old">Old</label>
@@ -80,6 +81,7 @@
         id="new"
         [(ngModel)]="taxRegime"
         (change)="resetOutput()"
+        (ngModelChange)="checkTaxRegime()"
         #newTaxRegime="ngModel"
       />
       <label for="new">New</label>
