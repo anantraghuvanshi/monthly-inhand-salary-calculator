@@ -49,6 +49,7 @@ export class SalaryCalculatorComponent implements OnInit {
     this.salaryMessage = `${
       this.userName
     }, your Monthly Salary is: ${Math.round(this.monthlySalary)}`;
+    this.openDialog(this.salaryMessage);
   }
 
   calculateTax() {
@@ -64,6 +65,7 @@ export class SalaryCalculatorComponent implements OnInit {
     this.taxMessage = `${this.userName}, your calculated tax is: ${Math.round(
       this.tax
     )}`;
+    this.openDialog(this.taxMessage);
   }
 
   calculateTaxOld(taxableSalary: number): number {

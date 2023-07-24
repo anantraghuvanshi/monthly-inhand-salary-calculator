@@ -12,6 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DialogComponentComponent } from './dialog-component/dialog-component.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { OutputDialogComponent } from './output-dialog/output-dialog.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     WelcomeComponent,
     FooterComponent,
     DialogComponentComponent,
+    OutputDialogComponent,
   ],
   imports: [
     BrowserModule,
