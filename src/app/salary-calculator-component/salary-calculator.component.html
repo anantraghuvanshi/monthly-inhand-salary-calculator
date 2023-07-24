@@ -54,7 +54,11 @@
         id="providentFund"
         name="providentFund"
         [(ngModel)]="providentFund"
+        (ngModelChange)="resetOutput()"
       />
+      <div *ngIf="validateProvidentFund()" class="error-message">
+        {{ validateProvidentFund() }}
+      </div>
     </div>
 
     <div class="form-control">

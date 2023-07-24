@@ -46,6 +46,9 @@ export class SalaryCalculatorComponent implements OnInit {
   }
 
   calculateMonthlySalary() {
+    if (this.validateProvidentFund()) {
+      return;
+    }
     if (!this.taxRegime) {
       this.taxRegimeError = 'Tax regime is required.';
       return;
@@ -69,6 +72,9 @@ export class SalaryCalculatorComponent implements OnInit {
   }
 
   calculateTax() {
+    if (this.validateProvidentFund()) {
+      return;
+    }
     if (!this.taxRegime) {
       this.taxRegimeError = 'Tax regime is required.';
       return;
@@ -92,11 +98,6 @@ export class SalaryCalculatorComponent implements OnInit {
       this.tax
     )}`;
     this.openOutputDialog(this.taxMessage);
-  }
-  checkTaxRegime() {
-    if (this.taxRegime) {
-      this.taxRegimeError = null;
-    }
   }
 
   calculateTaxOld(taxableSalary: number): number {
@@ -152,5 +153,19 @@ export class SalaryCalculatorComponent implements OnInit {
   resetOutput() {
     this.taxMessage = null;
     this.salaryMessage = null;
+  }
+  validateProvidentFund() {
+    if (this.providentFund < 0) {
+      return "PF can't be negative.";
+    } else if (this.providentFund > this.basePay * 0.8) {
+      return "PF can't be greater than 80% of base pay.";
+    } else {
+      return null;
+    }
+  }
+  checkTaxRegime() {
+    if (this.taxRegime) {
+      this.taxRegimeError = null;
+    }
   }
 }
