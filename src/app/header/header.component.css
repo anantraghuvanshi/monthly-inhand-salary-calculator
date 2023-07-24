@@ -29,6 +29,10 @@
 .navbar-nav .nav-link:hover {
   color: #FFFFFF;
 }
+.container-fluid{
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
 .github-icon {
   color: #3A7BD5;
@@ -38,6 +42,11 @@
 .star-count {
   color: #3A7BD5;
   font-size: 16px;
+}
+.nav-about {
+  color: #3A7BD5;
+  font-size: 16px;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 600px) {
