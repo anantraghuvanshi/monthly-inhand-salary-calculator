@@ -56,3 +56,24 @@
 .fa-heart {
   color: #0082FF;
 }
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+  .footer {
+    height: auto;
+    padding: 10px;
+  }
+  
+  .fa {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+  .footer {
+    padding: 15px;
+  }
+  
+  .fa {
+    font-size: 18px;
+  }
+}
