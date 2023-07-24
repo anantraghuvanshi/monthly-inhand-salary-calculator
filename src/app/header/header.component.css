@@ -2,8 +2,9 @@
 
 .header, .navbar {
   font-family: 'Roboto', sans-serif;
-  background-image: linear-gradient(to bottom, #d3e0f3, #b3d3f9, #93c7ff);
-  animation: wave 3s ease-in-out infinite;
+  background-image: linear-gradient(-60deg, #d3e0f3 0%, #b3d3f9 50%, #93c7ff 100%);
+  background-size: 200% 200%;
+  animation: gradient 3s ease-in-out infinite;
   border-bottom: 1px solid #ccc;
 }
 
@@ -69,7 +70,29 @@
     font-size: 15px;
   }
 }
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
 .fas {
   margin-right: 5px;
+  transition: 0.3s;
+}
+.fas:hover {
+  transform: rotate(360deg); 
+}
+
+.github-icon:hover {
+  color: #000000; }
+
+.star-count:hover{
+  color: #000000;
 }
