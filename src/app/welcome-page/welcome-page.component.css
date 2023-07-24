@@ -14,8 +14,8 @@
 
 .typing-text {
   position: absolute;
-  top: 40%;
-  left: 55%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   font-size: 32px;
   font-weight: 700;
@@ -24,7 +24,7 @@
   white-space: nowrap;
   overflow: hidden;
   opacity: 0;
-  animation: typing 2.5s steps(48, end) forwards, fadeIn 2s 0.1s forwards; 
+  animation: typing 2.5s steps(48, end) forwards, fadeIn 2s 0.1s forwards;
 }
 
 @keyframes typing {
@@ -43,7 +43,7 @@
 
 .user-input.visible {
   display: block;
-  opacity: 0; 
+  opacity: 0;
   transform: translateY(30px);
   animation: slideIn 1s 1s forwards ease-in-out, fadeIn 1s 1s forwards ease-in-out;
 }
@@ -53,8 +53,8 @@
     transform: translateY(30px);
     opacity: 0;
   }
-  to { 
-    transform: translateY(0); 
+  to {
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -66,4 +66,30 @@
 
 .form-control {
   margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .typing-text {
+    top: 40%;
+    font-size: 16px;
+    width: 90%;
+    white-space: nowrap;
+    text-align: center;
+    animation: typing 5s steps(60, end) forwards, fadeIn 2s 0.1s forwards;
+  }
+  .user-input.visible {
+    animation: slideIn 1s 1s forwards ease-in-out, fadeIn 1s 1s forwards ease-in-out;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+  .typing-text {
+    top: 44%;
+    left: 59%;
+    font-size: 28px;
+    animation: typing 2s steps(48, end) forwards, fadeIn 2s 0.1s forwards;
+  }
+  .user-input.visible {
+    animation: slideIn 1s 1s forwards ease-in-out, fadeIn 1s 1s forwards ease-in-out;
+  }
 }
