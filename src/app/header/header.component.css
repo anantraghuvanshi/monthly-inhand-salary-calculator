@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap'); /* Import Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 .header, .navbar {
   font-family: 'Roboto', sans-serif;
@@ -17,6 +17,8 @@
   color: #3A7BD5;
   font-size: 20px;
   font-weight: bold;
+  margin-left: 0;
+  margin-right: 2rem; 
 }
 
 .navbar-nav .nav-link {
@@ -40,7 +42,7 @@
 
 @media screen and (max-width: 600px) {
   .navbar-brand {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .navbar-brand .second-part::before {
@@ -48,8 +50,16 @@
     white-space: pre;
   }
 
-  .navbar-collapse {
-    flex-grow: 0;
+  .navbar-nav .nav-link {
+    font-size: 14px;
+  }
+
+  .github-icon {
+    font-size: 18px;
+  }
+
+  .star-count {
+    font-size: 14px;
   }
 }
 
@@ -70,6 +80,7 @@
     font-size: 15px;
   }
 }
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -86,12 +97,14 @@
   margin-right: 5px;
   transition: 0.3s;
 }
+
 .fas:hover {
   transform: rotate(360deg); 
 }
 
 .github-icon:hover {
-  color: #000000; }
+  color: #000000; 
+}
 
 .star-count:hover{
   color: #000000;

@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DialogComponentComponent } from './dialog-component/dialog-component.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { OutputDialogComponent } from './output-dialog/output-dialog.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { OutputDialogComponent } from './output-dialog/output-dialog.component';
     FooterComponent,
     DialogComponentComponent,
     OutputDialogComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
