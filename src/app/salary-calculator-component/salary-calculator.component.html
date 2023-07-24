@@ -64,6 +64,7 @@
         id="old"
         [(ngModel)]="taxRegime"
         (change)="resetOutput()"
+        #oldTaxRegime="ngModel"
       />
       <label for="old">Old</label>
       <input
@@ -73,8 +74,12 @@
         id="new"
         [(ngModel)]="taxRegime"
         (change)="resetOutput()"
+        #newTaxRegime="ngModel"
       />
       <label for="new">New</label>
+      <div *ngIf="taxRegimeError" class="error-message">
+        {{ taxRegimeError }}
+      </div>
     </div>
 
     <div class="button-container">

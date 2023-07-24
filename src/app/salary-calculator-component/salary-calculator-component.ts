@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { WelcomeComponent } from '../welcome-page/welcome-page.component';
 import { DialogComponentComponent } from '../dialog-component/dialog-component.component';
 import { MatDialog } from '@angular/material/dialog';
+import { OutputDialogComponent } from '../output-dialog/output-dialog.component';
 
 @Component({
   selector: 'app-salary-calculator',
@@ -19,6 +20,7 @@ export class SalaryCalculatorComponent implements OnInit {
   userName: string | null | undefined;
   taxMessage!: string | null;
   salaryMessage!: string | null;
+  taxRegimeError!: string | null;
 
   constructor(
     private router: Router,
@@ -37,35 +39,59 @@ export class SalaryCalculatorComponent implements OnInit {
       data: { info: content },
     });
   }
+  openOutputDialog(content: string): void {
+    const dialogRef = this.dialog.open(OutputDialogComponent, {
+      data: { info: content },
+    });
+  }
 
   calculateMonthlySalary() {
+    this.taxRegimeError = null;
+
+    if (!this.taxRegime) {
+      this.taxRegimeError = 'Tax regime is required.';
+      return;
+    }
+
     if (!this.basePay) {
       return;
     }
+
     if (this.tax === undefined) {
       this.tax = 0;
     }
+
     this.monthlySalary = (this.basePay - this.providentFund - this.tax) / 12;
     this.salaryMessage = `${
       this.userName
     }, your Monthly Salary is: ${Math.round(this.monthlySalary)}`;
-    this.openDialog(this.salaryMessage);
+    this.openOutputDialog(this.salaryMessage);
   }
 
   calculateTax() {
+    this.taxRegimeError = null;
+
+    if (!this.taxRegime) {
+      this.taxRegimeError = 'Tax regime is required.';
+      return;
+    }
+
     if (!this.basePay) {
       return;
     }
+
     const taxableSalary = this.basePay - this.providentFund;
+
     if (this.taxRegime === 'old') {
       this.tax = this.calculateTaxOld(taxableSalary);
     } else {
       this.tax = this.calculateTaxNew(taxableSalary);
     }
+
     this.taxMessage = `${this.userName}, your calculated tax is: ${Math.round(
       this.tax
     )}`;
-    this.openDialog(this.taxMessage);
+    this.openOutputDialog(this.taxMessage);
   }
 
   calculateTaxOld(taxableSalary: number): number {
