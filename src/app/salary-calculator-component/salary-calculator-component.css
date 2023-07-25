@@ -136,6 +136,13 @@ input[type="radio"]:checked + label {
   cursor: pointer;
 }
 
+.show-chart {
+  position: absolute;
+  left: 0;
+  transition: left 0.5s ease-out;
+}
+
+
 /* Media Queries */ 
 @media screen and (max-width: 600px) {
   .card {

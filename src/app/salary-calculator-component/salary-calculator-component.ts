@@ -21,6 +21,7 @@ export class SalaryCalculatorComponent implements OnInit {
   taxMessage!: string | null;
   salaryMessage!: string | null;
   taxRegimeError!: string | null;
+  showChart = false;
 
   constructor(
     private router: Router,
@@ -69,6 +70,8 @@ export class SalaryCalculatorComponent implements OnInit {
       this.userName
     }, your Monthly Salary is: ${Math.round(this.monthlySalary)}`;
     this.openOutputDialog(this.salaryMessage);
+
+    this.showChart = true;
   }
 
   calculateTax() {
@@ -98,6 +101,8 @@ export class SalaryCalculatorComponent implements OnInit {
       this.tax
     )}`;
     this.openOutputDialog(this.taxMessage);
+
+    this.showChart = true;
   }
 
   calculateTaxOld(taxableSalary: number): number {
