@@ -14,8 +14,8 @@
 
 .typing-text {
   position: absolute;
-  top: 40%;
-  left: 55%;
+  top: 32%;
+  left: 57%;
   transform: translate(-50%, -50%);
   font-size: 32px;
   font-weight: 700;
@@ -26,6 +26,38 @@
   opacity: 0;
   animation: typing 2.5s steps(48, end) forwards, fadeIn 2s 0.1s forwards;
 }
+.socials-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.socials-heading {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #3A7BD5;
+  text-align: center;
+}
+
+.icons-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 10rem;
+}
+
+.fab {
+  color: #3A7BD5;
+  transition: color 0.3s ease-in-out;
+}
+
+.fab:hover {
+  color: #000;
+}
+
+
 
 @keyframes typing {
   from { width: 0; }
@@ -37,16 +69,20 @@
 }
 
 .user-input {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-top: 2rem;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideIn 2s 2s forwards ease-in-out, fadeIn 2s 2s forwards ease-in-out;
 }
 
 .user-input.visible {
-  display: block;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: slideIn 1s 1s forwards ease-in-out, fadeIn 1s 1s forwards ease-in-out;
+  opacity: 1;
 }
+
 
 @keyframes slideIn {
   from {
