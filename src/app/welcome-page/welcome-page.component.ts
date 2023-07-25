@@ -16,6 +16,9 @@ export class WelcomeComponent implements OnInit {
     setTimeout(() => {
       document.getElementById('userInput')?.classList.add('visible');
     }, 2000);
+    setTimeout(() => {
+      document.getElementById('socialsContainer')?.classList.add('visible');
+    }, 3000);
   }
 
   goToSalaryCalculator() {

@@ -31,7 +31,15 @@
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideIn 2s 3s forwards ease-in-out, fadeIn 2s 3s forwards ease-in-out;
 }
+
+.socials-container.visible {
+  opacity: 1;
+}
+
 
 .socials-heading {
   font-size: 1.2rem;
