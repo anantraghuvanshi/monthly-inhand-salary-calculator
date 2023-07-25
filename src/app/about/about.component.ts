@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Octokit } from '@octokit/core';
+import { environment } from '../../environment/environment';
 
 @Component({
   selector: 'app-about',
@@ -15,7 +16,7 @@ export class AboutComponent implements OnInit {
 
   async fetchCollaborators() {
     const octokit = new Octokit({
-      auth: `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`,
+      auth: environment.githubToken,
     });
     try {
       const response = await octokit.request(

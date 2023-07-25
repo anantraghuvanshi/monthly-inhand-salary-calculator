@@ -1,14 +1,22 @@
-<div class="about-container">
-  <h2>Problem Statement</h2>
+<app-header></app-header>
+<div class="about">
+  <h1>PROBLEM STATEMENT</h1>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula
+    facilisis mi ut convallis. In suscipit at sem eget feugiat. Vestibulum vel
+    cursus elit, et sagittis magna.
   </p>
 
-  <h2>Collaborators</h2>
-  <ul>
-    <li *ngFor="let collaborator of collaborators">
-      {{ collaborator }}
-    </li>
-  </ul>
+  <div class="collaborators">
+    <h1>COLLABORATORS</h1>
+    <ng-container *ngFor="let collaborator of collaborators">
+      <div class="collaborator-container">
+        <span class="collaborator-name">{{ collaborator }}</span>
+        <a href="https://github.com/{{ collaborator }}" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </ng-container>
+  </div>
 </div>
+<app-footer></app-footer>
