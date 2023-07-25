@@ -1,5 +1,14 @@
 import { Component } from '@angular/core';
-import { Chart } from 'chart.js';
+import {
+  Chart,
+  PieController,
+  ArcElement,
+  CategoryScale,
+  Title,
+  Tooltip,
+} from 'chart.js';
+
+Chart.register(PieController, ArcElement, CategoryScale, Title, Tooltip);
 import { SalaryCalculatorComponent } from '../salary-calculator-component/salary-calculator-component';
 
 @Component({
@@ -26,8 +35,18 @@ export class PieChartComponent {
     };
 
     const config = {
-      type: 'pie',
+      type: 'pie' as const,
       data: data,
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: 'Pie Chart',
+          },
+          tooltip: {},
+        },
+      },
     };
 
     var myChart = new Chart('myChart', config);

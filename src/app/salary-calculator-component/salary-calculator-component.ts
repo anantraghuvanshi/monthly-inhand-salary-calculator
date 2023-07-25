@@ -14,9 +14,9 @@ export class SalaryCalculatorComponent implements OnInit {
   taxableSalary!: number;
   providentFund: number = 0;
   taxRegime!: string;
-  tax!: number;
+  public tax!: number;
   basePay!: number;
-  monthlySalary!: number;
+  public monthlySalary!: number;
   userName: string | null | undefined;
   taxMessage!: string | null;
   salaryMessage!: string | null;
