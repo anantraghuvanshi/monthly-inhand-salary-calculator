@@ -14,7 +14,6 @@ import { DialogComponentComponent } from './dialog-component/dialog-component.co
 import { MatDialogModule } from '@angular/material/dialog';
 import { OutputDialogComponent } from './output-dialog/output-dialog.component';
 import { AboutComponent } from './about/about.component';
-import { PieChartComponent } from './pie-chart/pie-chart.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +25,6 @@ import { PieChartComponent } from './pie-chart/pie-chart.component';
     DialogComponentComponent,
     OutputDialogComponent,
     AboutComponent,
-    PieChartComponent,
   ],
   imports: [
     BrowserModule,

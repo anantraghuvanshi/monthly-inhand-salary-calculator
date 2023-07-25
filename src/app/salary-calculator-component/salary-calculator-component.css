@@ -141,6 +141,11 @@ input[type="radio"]:checked + label {
   left: 0;
   transition: left 0.5s ease-out;
 }
+.calculator-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 
 /* Media Queries */ 
