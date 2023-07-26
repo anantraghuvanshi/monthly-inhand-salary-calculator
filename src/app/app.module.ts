@@ -14,7 +14,6 @@ import { DialogComponentComponent } from './dialog-component/dialog-component.co
 import { MatDialogModule } from '@angular/material/dialog';
 import { OutputDialogComponent } from './output-dialog/output-dialog.component';
 import { AboutComponent } from './about/about.component';
-import { FeedBackComponent } from './feed-back/feed-back.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +25,6 @@ import { FeedBackComponent } from './feed-back/feed-back.component';
     DialogComponentComponent,
     OutputDialogComponent,
     AboutComponent,
-    FeedBackComponent,
   ],
   imports: [
     BrowserModule,
