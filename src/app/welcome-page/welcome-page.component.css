@@ -40,7 +40,7 @@
 }
 
 .socials-heading {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   font-weight: 500;
   margin-bottom: 1rem;
   color: #3A7BD5;
@@ -50,8 +50,8 @@
 .icons-container {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
-  width: 10rem;
+  gap: 0.7rem;
+  width: 5rem;
 }
 
 .fab {
