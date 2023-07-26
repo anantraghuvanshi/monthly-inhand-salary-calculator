@@ -1,1 +1,22 @@
-<p>feed-back works!</p>
+<div class="feedback-container">
+  <h2>Feedback</h2>
+  <form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" formControlName="name" required />
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" formControlName="email" required />
+    </div>
+    <div>
+      <label for="feedback">Feedback:</label>
+      <textarea id="feedback" formControlName="feedback" required></textarea>
+    </div>
+    <div>
+      <button type="submit" [disabled]="feedbackForm.invalid">
+        Submit Feedback
+      </button>
+    </div>
+  </form>
+</div>

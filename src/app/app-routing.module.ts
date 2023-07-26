@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'salary-calculator', component: SalaryCalculatorComponent },
   { path: 'about', component: AboutComponent },
   {
-    path: 'feedback',
+    path: 'feed-back',
     component: FeedBackComponent,
   },
 ];
