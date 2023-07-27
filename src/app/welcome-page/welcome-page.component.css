@@ -82,11 +82,11 @@
   margin-top: 2rem;
   opacity: 0;
   transform: translateY(30px);
-  animation: slideIn 2s 2s forwards ease-in-out, fadeIn 2s 2s forwards ease-in-out;
+  
 }
 
 .user-input.visible {
-  opacity: 1;
+  animation: slideIn 2s 2s forwards ease-in-out, fadeIn 2s 2s forwards ease-in-out;
 }
 
 
