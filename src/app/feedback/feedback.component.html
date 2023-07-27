@@ -4,7 +4,13 @@
   <form [formGroup]="feedbackForm" (ngSubmit)="sendFeedback()">
     <div class="form-control">
       <label for="name">Name:</label>
-      <input type="text" id="name" formControlName="name" required />
+      <input
+        type="text"
+        placeholder="Enter your name"
+        id="name"
+        formControlName="name"
+        required
+      />
       <div
         *ngIf="
           feedbackForm.controls['name'].invalid &&
@@ -21,7 +27,13 @@
 
     <div class="form-control">
       <label for="email">Email:</label>
-      <input type="email" id="email" formControlName="email" required />
+      <input
+        type="email"
+        placeholder="Enter your email"
+        id="email"
+        formControlName="email"
+        required
+      />
       <div
         *ngIf="
           feedbackForm.controls['email'].invalid &&
@@ -41,7 +53,12 @@
 
     <div class="form-control">
       <label for="comment">Comment:</label>
-      <textarea id="comment" formControlName="comment" required></textarea>
+      <textarea
+        placeholder="Tell us about your experience using this application."
+        id="comment"
+        formControlName="comment"
+        required
+      ></textarea>
       <div
         *ngIf="
           feedbackForm.controls['comment'].invalid &&

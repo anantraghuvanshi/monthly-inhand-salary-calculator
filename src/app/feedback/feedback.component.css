@@ -98,6 +98,17 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
   text-align: right;
   font-weight: bold;
 }
+::placeholder {
+  color: #999;
+  font-weight: 500;
+  opacity: 1; 
+}
+
+textarea::placeholder {
+  color: #999;
+  font-weight: 500;
+  opacity: 1; 
+}
 
 /* Media Queries */ 
 @media screen and (max-width: 600px) {
@@ -120,6 +131,7 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
     width: 100%;
   }
 }
+
 
 @media screen and (min-width: 601px) and (max-width: 1200px) {
   .card {
