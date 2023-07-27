@@ -54,6 +54,9 @@
   text-decoration: none;
   margin-left: 10px;
 }
+.second-part{
+  margin-left: 5px;
+}
 
 @media screen and (max-width: 600px) {
   .navbar-brand {
