@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Octokit } from '@octokit/core';
-import { environment } from '../../environment/environment';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-about',
