@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,12 +8,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./welcome-page.component.css'],
 })
 export class WelcomeComponent implements OnInit {
-  userName: string = '';
+  userNameForm = this.fb.group({
+    userName: ['', [Validators.required, Validators.pattern('^[a-zA-Z]*$')]],
+  });
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private fb: FormBuilder) {}
 
   ngOnInit() {
-    this.userName = localStorage.getItem('userName') || 'Guest';
+    let userName = localStorage.getItem('userName') || 'Guest';
+    this.userNameForm.patchValue({ userName });
+
     setTimeout(() => {
       document.getElementById('userInput')?.classList.add('visible');
     }, 2000);
@@ -23,7 +28,9 @@ export class WelcomeComponent implements OnInit {
   }
 
   goToSalaryCalculator() {
-    localStorage.setItem('userName', this.userName);
+    let userName = this.userNameForm.get('userName')?.value || '';
+    userName = userName.charAt(0).toUpperCase() + userName.slice(1);
+    localStorage.setItem('userName', userName);
     this.router.navigate(['salary-calculator']);
   }
 }
