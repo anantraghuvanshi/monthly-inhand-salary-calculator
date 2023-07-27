@@ -1,1 +1,42 @@
-<p>feedback works!</p>
+<app-header></app-header>
+<div class="card">
+  <h1>FEEDBACK</h1>
+  <form [formGroup]="feedbackForm" (ngSubmit)="sendFeedback()" class="form">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        id="name"
+        formControlName="name"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        formControlName="email"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="comment">Comment:</label>
+      <textarea
+        id="comment"
+        formControlName="comment"
+        class="form-control"
+        required
+      ></textarea>
+    </div>
+
+    <div class="button-container">
+      <button type="submit" class="btn">Submit</button>
+    </div>
+  </form>
+</div>
+<app-footer></app-footer>

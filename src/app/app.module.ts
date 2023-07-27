@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SalaryCalculatorComponent } from './salary-calculator-component/salary-calculator-component';
 import { HeaderComponent } from './header/header.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WelcomeComponent } from './welcome-page/welcome-page.component';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
@@ -35,6 +35,7 @@ import { FeedbackComponent } from './feedback/feedback.component';
     RouterModule.forRoot([]),
     BrowserAnimationsModule,
     MatDialogModule,
+    ReactiveFormsModule,
   ],
   providers: [{ provide: WelcomeComponent, useClass: WelcomeComponent }],
   bootstrap: [AppComponent],

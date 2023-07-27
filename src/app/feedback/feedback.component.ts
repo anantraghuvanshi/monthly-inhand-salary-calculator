@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 
 @Component({
   selector: 'app-feedback',
@@ -7,31 +8,32 @@ import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
   styleUrls: ['./feedback.component.css'],
 })
 export class FeedbackComponent implements OnInit {
-  name = '';
-  email = '';
-  feedback = '';
+  public feedbackForm: FormGroup;
 
-  onSubmit() {
-    const emailData = {
-      name: this.name,
-      email: this.email,
-      feedback: this.feedback,
-    };
-
-    //emailjs
-    // .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-    //data: emailData,
-    //public_key: 'YOUR_PUBLIC_KEY',
-    //  })
-    // .then(
-    // (result: EmailJSResponseStatus) => {
-    //   console.log(result.text);
-    //  },
-    //  (error) => {
-    //    console.log(error.text);
-    //  }
-    // );
+  constructor(private fb: FormBuilder) {
+    this.feedbackForm = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      comment: ['', Validators.required],
+    });
   }
 
-  ngOnInit() {}
+  ngOnInit(): void {}
+
+  sendFeedback(): void {
+    if (this.feedbackForm.valid) {
+      const feedback = this.feedbackForm.value;
+      emailjs
+        .send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', feedback, 'YOUR_USER_ID')
+        .then(
+          (result: EmailJSResponseStatus) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+      this.feedbackForm.reset();
+    }
+  }
 }
