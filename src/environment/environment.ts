@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  githubToken: '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',
+  githubToken: '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',
 };
