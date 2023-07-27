@@ -2,6 +2,9 @@
 
 This is an Angular-based application which allows users to calculate their monthly in-hand salary. The project aims to provide an intuitive user interface to make salary calculations simple and efficient.
 
+## Demo Link <br>
+https://monthlyinhandsalary.netlify.app/
+
 ## Table of Contents
 
 1. [Installation](#installation)
