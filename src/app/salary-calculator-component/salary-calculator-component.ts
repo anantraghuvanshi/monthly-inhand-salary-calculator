@@ -101,9 +101,9 @@ export class SalaryCalculatorComponent implements OnInit {
       this.tax = this.calculateTaxNew(taxableSalary);
     }
 
-    this.taxMessage = `${this.userName}, your calculated tax is: ${Math.round(
-      this.tax
-    )}`;
+    this.taxMessage = `${
+      this.userName
+    }, your annual calculated tax is: ${Math.round(this.tax)}`;
     this.openOutputDialog(this.taxMessage);
   }
 
