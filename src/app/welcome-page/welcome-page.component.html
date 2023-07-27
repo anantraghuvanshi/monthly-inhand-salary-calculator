@@ -3,16 +3,30 @@
     <h1 class="typing-text">LET'S CALCULATE YOUR SALARY</h1>
   </div>
   <div id="userInput" class="user-input">
-    <input
-      type="text"
-      id="userName"
-      [(ngModel)]="userName"
-      placeholder="Enter your name"
-      class="form-control"
-    />
-    <button class="btn btn-primary" (click)="goToSalaryCalculator()">
-      Continue
-    </button>
+    <form [formGroup]="userNameForm">
+      <input
+        type="text"
+        id="userName"
+        formControlName="userName"
+        placeholder="Enter your name"
+        class="form-control"
+      />
+      <div
+        *ngIf="
+          userNameForm.get('userName')?.invalid &&
+          userNameForm.get('userName')?.touched
+        "
+      >
+        <p class="error-message">Name should only contain letters</p>
+      </div>
+      <button
+        class="btn btn-primary"
+        [disabled]="userNameForm.invalid"
+        (click)="goToSalaryCalculator()"
+      >
+        Continue
+      </button>
+    </form>
     <div id="socialsContainer" class="socials-container">
       <p class="socials-heading">SOCIALS</p>
       <div class="icons-container">
