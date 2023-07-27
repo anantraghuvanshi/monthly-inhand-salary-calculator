@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
-
+import { OutputDialogComponent } from '../output-dialog/output-dialog.component';
 @Component({
   selector: 'app-feedback',
   templateUrl: './feedback.component.html',
@@ -10,7 +11,7 @@ import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 export class FeedbackComponent implements OnInit {
   public feedbackForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private dialog: MatDialog) {
     this.feedbackForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -24,10 +25,16 @@ export class FeedbackComponent implements OnInit {
     if (this.feedbackForm.valid) {
       const feedback = this.feedbackForm.value;
       emailjs
-        .send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', feedback, 'YOUR_USER_ID')
+        .send(
+          'service_6ulisls',
+          'template_j6fvnkd',
+          feedback,
+          'LH1Va_XLcurogrm6Q'
+        )
         .then(
           (result: EmailJSResponseStatus) => {
             console.log(result.text);
+            this.openDialog();
           },
           (error) => {
             console.log(error.text);
@@ -35,5 +42,12 @@ export class FeedbackComponent implements OnInit {
         );
       this.feedbackForm.reset();
     }
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(OutputDialogComponent, {
+      width: '250px',
+      data: { info: 'Form has been successfully submitted' },
+    });
   }
 }
