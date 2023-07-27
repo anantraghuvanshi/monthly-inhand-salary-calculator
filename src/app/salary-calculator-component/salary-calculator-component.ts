@@ -12,7 +12,7 @@ import { OutputDialogComponent } from '../output-dialog/output-dialog.component'
 })
 export class SalaryCalculatorComponent implements OnInit {
   taxableSalary!: number;
-  providentFund: number = 0;
+  providentFund!: number;
   taxRegime!: string;
   public tax!: number;
   basePay!: number;
@@ -47,6 +47,9 @@ export class SalaryCalculatorComponent implements OnInit {
   }
 
   calculateMonthlySalary() {
+    if (!this.providentFund) {
+      this.providentFund = 0;
+    }
     if (this.validateProvidentFund()) {
       return;
     }
@@ -73,6 +76,9 @@ export class SalaryCalculatorComponent implements OnInit {
   }
 
   calculateTax() {
+    if (!this.providentFund) {
+      this.providentFund = 0;
+    }
     if (this.validateProvidentFund()) {
       return;
     }
