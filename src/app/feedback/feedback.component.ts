@@ -18,19 +18,19 @@ export class FeedbackComponent implements OnInit {
       feedback: this.feedback,
     };
 
-    emailjs
-      .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-        data: emailData,
-        public_key: 'YOUR_PUBLIC_KEY',
-      })
-      .then(
-        (result: EmailJSResponseStatus) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    //emailjs
+    // .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+    //data: emailData,
+    //public_key: 'YOUR_PUBLIC_KEY',
+    //  })
+    // .then(
+    // (result: EmailJSResponseStatus) => {
+    //   console.log(result.text);
+    //  },
+    //  (error) => {
+    //    console.log(error.text);
+    //  }
+    // );
   }
 
   ngOnInit() {}
