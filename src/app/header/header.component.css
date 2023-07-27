@@ -48,6 +48,12 @@
   font-size: 16px;
   text-decoration: none;
 }
+.nav-feedback {
+  color: #3A7BD5;
+  font-size: 16px;
+  text-decoration: none;
+  margin-left: 10px;
+}
 
 @media screen and (max-width: 600px) {
   .navbar-brand {
