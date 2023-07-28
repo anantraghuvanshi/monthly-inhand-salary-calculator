@@ -164,6 +164,22 @@ input[type="radio"]:checked + label {
     max-width: none;
   }
 
+  h1 {
+    font-size: 24px;  /* Increase title size */
+  }
+
+  .result-message {
+    font-size: 16px;  /* Increase result message size */
+  }
+
+  input[type="number"] {
+    font-size: 16px;  /* Increase input font size */
+  }
+
+  input[type="number"]::placeholder {
+    font-size: 16px;  /* Increase placeholder font size */
+  }
+
   .button-container {
     flex-direction: column;
   }
@@ -173,6 +189,7 @@ input[type="radio"]:checked + label {
     width: 100%;
   }
 }
+
 
 @media screen and (min-width: 601px) and (max-width: 1024px) {
   .card {
