@@ -58,6 +58,12 @@ input[type="number"]:focus {
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+input[type="number"]::placeholder {
+  color: #999;
+  font-weight: 500;
+  opacity: 1; 
+}
+
 input[type="radio"] {
   display: none;
 }
@@ -77,17 +83,6 @@ input[type="radio"]:checked + label {
   padding: 5px 10px;
   border-radius: 5px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-input[type="number"]::placeholder {
-  color: #999;
-  font-weight: 500;
-  opacity: 1; 
-}
-
-input[type="radio"]::placeholder {
-  color: #999;
-  font-weight: 500;
-  opacity: 1; 
 }
 
 .button-container {
@@ -150,15 +145,14 @@ input[type="radio"]::placeholder {
   cursor: pointer;
 }
 
-
 .calculator-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-
 /* Media Queries */ 
+
 @media screen and (max-width: 600px) {
   .card {
     height: auto;
@@ -180,12 +174,14 @@ input[type="radio"]::placeholder {
   }
 }
 
-@media screen and (min-width: 601px) and (max-width: 1200px) {
+@media screen and (min-width: 601px) and (max-width: 1024px) {
   .card {
-    padding: 20px;
+    padding: 2rem;
   }
+}
 
-  .btn {
-    margin-bottom: 10px;
+@media screen and (min-width: 1025px) {
+  .card {
+    padding: 3rem;
   }
 }
