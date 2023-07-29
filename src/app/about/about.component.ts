@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Octokit } from '@octokit/core';
 import { environment } from '../../environments/environment';
-import * as dotenv from 'dotenv';
 
 @Component({
   selector: 'app-about',
@@ -17,7 +16,7 @@ export class AboutComponent implements OnInit {
 
   async fetchCollaborators() {
     const octokit = new Octokit({
-      auth: dotenv.config().GITHUB_TOKEN,
+      auth: 'example',
     });
     try {
       const response = await octokit.request(
