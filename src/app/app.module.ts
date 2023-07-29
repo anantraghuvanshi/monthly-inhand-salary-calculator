@@ -15,6 +15,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { OutputDialogComponent } from './output-dialog/output-dialog.component';
 import { AboutComponent } from './about/about.component';
 import { FeedbackComponent } from './feedback/feedback.component';
+import * as dotenv from 'dotenv';
 
 @NgModule({
   declarations: [
@@ -40,4 +41,8 @@ import { FeedbackComponent } from './feedback/feedback.component';
   providers: [{ provide: WelcomeComponent, useClass: WelcomeComponent }],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  constructor() {
+    dotenv.config();
+  }
+}
