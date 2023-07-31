@@ -16,7 +16,7 @@ export class AboutComponent implements OnInit {
 
   async fetchCollaborators() {
     const octokit = new Octokit({
-      auth: 'example',
+      auth: environment.githubToken,
     });
     try {
       const response = await octokit.request(
