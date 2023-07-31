@@ -45,4 +45,4 @@ Contributions are always welcome! Please read the [contribution guidelines](CONT
 
 ## License
 
-This project is licensed under the terms of the XXXXX license. For more information, please see [LICENSE](LICENSE.md).
+For more information, please see [LICENSE](LICENSE.md).
