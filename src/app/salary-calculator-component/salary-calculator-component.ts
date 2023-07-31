@@ -13,7 +13,7 @@ import { OutputDialogComponent } from '../output-dialog/output-dialog.component'
 export class SalaryCalculatorComponent implements OnInit {
   taxableSalary!: number;
   providentFund!: number;
-  taxRegime!: string;
+  taxRegime: string = 'old';
   public tax!: number;
   basePay!: number;
   public monthlySalary!: number;
