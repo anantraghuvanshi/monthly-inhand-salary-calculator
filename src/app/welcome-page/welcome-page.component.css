@@ -126,30 +126,12 @@ form {
 .form-control {
   margin-bottom: 1rem;
 }
-
-@media screen and (max-width: 600px) {
+@media only screen and (max-device-width: 480px) {
   .typing-text {
-    top: 43%;
-    left: 47%;
-    font-size: 22px;
-    width: 90%;
-    white-space: nowrap;
-    text-align: center;
-    animation: typing 4s steps(48, end) forwards, fadeIn 2s 0.1s forwards;
+    margin-top: 10px;
+    top: 35%;
+    left: 65%;
+    font-size: 40px;
   }
-  .user-input.visible {
-    animation: slideIn 1s 1s forwards ease-in-out, fadeIn 1s 1s forwards ease-in-out;
-  }
-}
-
-@media screen and (min-width: 601px) and (max-width: 1200px) {
-  .typing-text {
-    top: 44%;
-    left: 59%;
-    font-size: 35px;
-    animation: typing 2s steps(48, end) forwards, fadeIn 2s 0.1s forwards;
-  }
-  .user-input.visible {
-    animation: slideIn 1s 1s forwards ease-in-out, fadeIn 1s 1s forwards ease-in-out;
-  }
+  
 }
