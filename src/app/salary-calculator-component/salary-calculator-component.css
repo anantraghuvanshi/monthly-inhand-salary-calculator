@@ -145,10 +145,4 @@ input[type="radio"]:checked + label {
   cursor: pointer;
 }
 
-.calculator-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 
