@@ -144,5 +144,20 @@ input[type="radio"]:checked + label {
   color: #3A7BD5;
   cursor: pointer;
 }
+.report-issue {
+  margin-top: 4rem;
+  color: #dc2626;
+  text-decoration: underline;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
 
+.report-issue:hover {
+  color: #89130e;
+}
 
+.report-issue i {
+  margin-right: 0.5rem;
+}
