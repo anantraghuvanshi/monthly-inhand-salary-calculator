@@ -1,0 +1,43 @@
+h2 {
+    color: #3A7BD5;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.mat-dialog-content {
+    background: rgba(232, 240, 254, 0.95);
+    color: #333;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+}
+
+.mat-dialog-actions {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+button {
+    color: #3498db;
+    background-color: #fefefe;
+    padding: 10px 20px;
+    border: 2px solid #000000;
+    border-radius: 25px;
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3); 
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #d7d5d2;
+}
+
+::ng-deep .mat-dialog-container {
+    background-color: rgba(255, 255, 255, 0.9)!important;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}

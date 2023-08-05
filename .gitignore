@@ -1,6 +1,7 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # Compiled output
+#/src/environments/environment.ts
 /dist
 /tmp
 /out-tsc
@@ -12,6 +13,7 @@ npm-debug.log
 yarn-error.log
 
 # IDEs and editors
+.env
 .idea/
 .project
 .classpath

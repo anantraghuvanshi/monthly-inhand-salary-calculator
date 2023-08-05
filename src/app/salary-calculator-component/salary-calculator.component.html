@@ -1,56 +1,134 @@
+<app-header></app-header>
 <div class="card">
-  <h1>Salary Calculator</h1>
-  <p>Your name is: {{ userName }}</p>
+  <h1>SALARY CALCULATOR</h1>
   <form>
     <div class="form-control">
-      <label for="basePay">Base Pay:</label>
+      <label for="basePay"
+        >Base Pay:
+        <i
+          class="fa fa-info-circle"
+          (click)="
+            openDialog(
+              '<p>It is the core payment that the employee can expect to receive regularly</p><p> typically expressed as an hourly rate or as a monthly or annual salary.</p>'
+            )
+          "
+        ></i>
+      </label>
       <input
         type="number"
+        placeholder="Enter your annual Base Pay"
         id="basePay"
         name="basePay"
         [(ngModel)]="basePay"
-      /><br /><br />
+        #basePayControl="ngModel"
+        required
+        min="0"
+      />
+      <div
+        *ngIf="
+          basePayControl.invalid &&
+          (basePayControl.dirty || basePayControl.touched)
+        "
+        class="error-message"
+      >
+        <div *ngIf="basePayControl.errors && basePayControl.errors['required']">
+          Base pay is required.
+        </div>
+        <div *ngIf="basePayControl.errors && basePayControl.errors['min']">
+          Base pay cannot be negative.
+        </div>
+      </div>
     </div>
+
     <div class="form-control">
-      <label for="providentFund">Provident Fund:</label>
+      <label for="providentFund"
+        >Provident Fund:
+        <i
+          class="fa fa-info-circle"
+          (click)="
+            openDialog('Do not forget to add Employer PF contribution as well')
+          "
+        ></i>
+      </label>
       <input
         type="number"
+        placeholder="Enter your annual PF"
         id="providentFund"
         name="providentFund"
         [(ngModel)]="providentFund"
-      /><br /><br />
+        (ngModelChange)="resetOutput()"
+      />
+      <div *ngIf="validateProvidentFund()" class="error-message">
+        {{ validateProvidentFund() }}
+      </div>
     </div>
+
     <div class="form-control">
-      <label for="taxRegime">Tax Regime:</label>
+      <label for="taxRegime"
+        >Tax Regime:
+        <i
+          class="fa fa-info-circle"
+          (click)="
+            openDialog(
+              '<p>Old Tax Regime:
+
+          The old tax regime allows for various tax deductions and exemptions.
+          However, the tax rates under this regime are typically higher than in the new regime.</p>
+
+          <p>New Tax Regime:
+          
+          The new tax regime offers lower tax rates, but fewer deductions.
+          It is generally simpler due to the elimination of most deductions and exemptions.</p>'
+            )
+          "
+        ></i>
+      </label>
       <input
         type="radio"
         name="taxRegime"
         value="old"
         id="old"
         [(ngModel)]="taxRegime"
+        (change)="resetOutput()"
+        (ngModelChange)="checkTaxRegime()"
+        #oldTaxRegime="ngModel"
+        checked
       />
-      <label for="old">Old </label>
+      <label for="old">Old</label>
       <input
         type="radio"
         name="taxRegime"
         value="new"
         id="new"
         [(ngModel)]="taxRegime"
+        (change)="resetOutput()"
+        (ngModelChange)="checkTaxRegime()"
+        #newTaxRegime="ngModel"
       />
-      <label for="new">New </label>
+      <label for="new">New</label>
+      <div *ngIf="taxRegimeError" class="error-message">
+        {{ taxRegimeError }}
+      </div>
     </div>
-    <div class="text-box">
-      <button class="btn btn-white btn-animate" (click)="calculateTax()">
+
+    <div class="button-container">
+      <button class="btn" (click)="calculateTax(); $event.preventDefault()">
         Calculate Tax
       </button>
       <button
-        class="btn btn-white btn-animate"
-        (click)="monthlySalary = calculateMonthlySalary()"
+        class="btn"
+        (click)="calculateMonthlySalary(); $event.preventDefault()"
       >
         Calculate Monthly Salary
       </button>
     </div>
+    <a
+      href="https://github.com/anantraghuvanshi/monthly-inhand-salary-calculator/issues"
+      target="_blank"
+      class="report-issue"
+    >
+      <i class="fa fa-bug"></i> Report an Issue
+    </a>
   </form>
-  <p *ngIf="monthlySalary">Monthly Salary: {{ monthlySalary }}</p>
-  <p *ngIf="tax">Calculated Tax: {{ tax }}</p>
 </div>
+<app-footer></app-footer>

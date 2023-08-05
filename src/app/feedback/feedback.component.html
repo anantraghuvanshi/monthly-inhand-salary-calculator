@@ -1,0 +1,83 @@
+<app-header></app-header>
+<div class="card">
+  <h1>FEEDBACK</h1>
+  <form [formGroup]="feedbackForm" (ngSubmit)="sendFeedback()">
+    <div class="form-control">
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        placeholder="Enter your name"
+        id="name"
+        formControlName="name"
+        required
+      />
+      <div
+        *ngIf="
+          feedbackForm.controls['name'].invalid &&
+          (feedbackForm.controls['name'].dirty ||
+            feedbackForm.controls['name'].touched)
+        "
+        class="error-message"
+      >
+        <div *ngIf="feedbackForm.controls['name']?.errors?.['required']">
+          Name is required.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-control">
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        placeholder="Enter your email"
+        id="email"
+        formControlName="email"
+        required
+      />
+      <div
+        *ngIf="
+          feedbackForm.controls['email'].invalid &&
+          (feedbackForm.controls['email'].dirty ||
+            feedbackForm.controls['email'].touched)
+        "
+        class="error-message"
+      >
+        <div *ngIf="feedbackForm.controls['email']?.errors?.['required']">
+          Email is required.
+        </div>
+        <div *ngIf="feedbackForm.controls['email']?.errors?.['email']">
+          Please enter a valid email address.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-control">
+      <label for="comment">Comment:</label>
+      <textarea
+        placeholder="Tell us about your experience using this application."
+        id="comment"
+        formControlName="comment"
+        required
+      ></textarea>
+      <div
+        *ngIf="
+          feedbackForm.controls['comment'].invalid &&
+          (feedbackForm.controls['comment'].dirty ||
+            feedbackForm.controls['comment'].touched)
+        "
+        class="error-message"
+      >
+        <div *ngIf="feedbackForm.controls['comment']?.errors?.['required']">
+          Comment is required.
+        </div>
+      </div>
+    </div>
+
+    <div class="button-container">
+      <button class="btn" type="submit" [disabled]="!feedbackForm.valid">
+        Submit Feedback
+      </button>
+    </div>
+  </form>
+</div>
+<app-footer></app-footer>

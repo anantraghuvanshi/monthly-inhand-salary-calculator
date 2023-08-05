@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+.welcome-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  background: #d3e0f3;
+  background-image: linear-gradient(to bottom, #d3e0f3, #b3d3f9, #93c7ff);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.typing-text {
+  position: absolute;
+  top: 32%;
+  left: 57%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  font-weight: 700;
+  color: #3A7BD5;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0;
+  animation: typing 2.5s steps(48, end) forwards, fadeIn 2s 0.1s forwards;
+}
+.socials-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.socials-container.visible {
+  animation: slideIn 2s 3s forwards ease-in-out, fadeIn 2s 3s forwards ease-in-out;
+}
+
+.socials-heading {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #3A7BD5;
+  text-align: center;
+}
+
+.icons-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.7rem;
+  width: 5rem;
+}
+
+.fab {
+  color: #3A7BD5;
+  transition: color 0.3s ease-in-out;
+}
+
+.fab:hover {
+  color: #000;
+}
+
+.error-message {
+  color: #a50f15; 
+  font-size: 12px;
+  margin-top: 5px;
+  text-align: right;
+  font-weight: bold;
+}
+::placeholder {
+  color: #999;
+  font-weight: 500;
+  opacity: 1; 
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 35ch; }
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.user-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  opacity: 0;
+  transform: translateY(30px);
+  
+}
+
+.user-input.visible {
+  animation: slideIn 2s 2s forwards ease-in-out, fadeIn 2s 2s forwards ease-in-out;
+}
+
+
+@keyframes slideIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.form-control {
+  margin-bottom: 1rem;
+}
+@media only screen and (max-device-width: 480px) {
+  .typing-text {
+    margin-top: 10px;
+    top: 35%;
+    left: 65%;
+    font-size: 40px;
+  }
+  
+}

@@ -1,14 +1,47 @@
-<div class="card">
-  <h1>Welcome!</h1>
-  <p>Please enter your name:</p>
-  <input
-    type="text"
-    id="userName"
-    [(ngModel)]="userName"
-    placeholder="Enter your name"
-  />
-  <button class="btn btn-white btn-animate" (click)="goToSalaryCalculator()">
-    Continue
-    <span>Go to Salary Calculator</span>
-  </button>
+<div class="welcome-container">
+  <div class="typing-container">
+    <h1 class="typing-text">LET'S CALCULATE YOUR SALARY</h1>
+  </div>
+  <div id="userInput" class="user-input">
+    <form [formGroup]="userNameForm">
+      <input
+        type="text"
+        placeholder="What should we call you?"
+        id="userName"
+        formControlName="userName"
+        class="form-control"
+      />
+      <div
+        *ngIf="
+          userNameForm.get('userName')?.invalid &&
+          userNameForm.get('userName')?.touched
+        "
+      >
+        <p class="error-message">Name should only contain letters</p>
+      </div>
+      <button
+        class="btn btn-primary"
+        [disabled]="userNameForm.invalid"
+        (click)="goToSalaryCalculator()"
+      >
+        Continue
+      </button>
+    </form>
+    <div id="socialsContainer" class="socials-container">
+      <p class="socials-heading">SOCIALS</p>
+      <div class="icons-container">
+        <a href="https://github.com/anantraghuvanshi" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/theanantraghuvanshi/"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://twitter.com/anant_codes" target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+      </div>
+    </div>
+  </div>
 </div>

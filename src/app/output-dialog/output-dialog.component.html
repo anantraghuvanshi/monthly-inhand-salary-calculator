@@ -1,0 +1,9 @@
+<div @fadeInOut>
+  <h2 mat-dialog-title>Result</h2>
+  <div mat-dialog-content>
+    <p [innerHTML]="data.info"></p>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="dialogRef.close()">Close</button>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  font-family: 'Roboto', sans-serif;
+  color: #3A7BD5;
+  background: #d3e0f3;
+  background-image: linear-gradient(to bottom, #d3e0f3, #b3d3f9, #93c7ff);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 10px;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 5px;
+}
+.collaborator-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .collaborator-name {
+    margin-right: 10px;
+  }
+  
+  .collaborators a {
+    color: #3A7BD5;
+  }
+  
+  .collaborators a:hover {
+    color: #000000;
+  }
+  
+  
+
+p {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 80%;
+  padding-bottom: 10px;
+}

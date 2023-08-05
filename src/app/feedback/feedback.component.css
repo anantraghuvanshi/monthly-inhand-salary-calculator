@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  background: #d3e0f3;
+  background-image: linear-gradient(to bottom, #d3e0f3, #b3d3f9, #93c7ff);
+  color: #3A7BD5;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  background-color: rgba(255,255,255,0.5);
+  padding: 10px;
+  border-radius: 5px; 
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-control {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  background:#5392f8;
+  border: #333;
+  border-radius: 12px;
+}
+
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #E8F0FE; 
+  color: #333;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform .3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+  outline: none;
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.btn {
+  padding: 12px 20px;
+  border-radius: 100px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #000000;
+  color: #fff;
+  animation: btnPulse 1.5s infinite;
+}
+
+.btn:hover {
+  background-color: #5392f8;
+}
+
+@keyframes btnPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.error-message {
+  color: #a50f15; 
+  font-size: 12px;
+  margin-top: 5px;
+  text-align: right;
+  font-weight: bold;
+}
+::placeholder {
+  color: #999;
+  font-weight: 500;
+  opacity: 1; 
+}
+
+textarea::placeholder {
+  color: #999;
+  font-weight: 500;
+  opacity: 1; 
+}
+
+/* Media Queries */ 
+@media screen and (max-width: 600px) {
+  .card {
+    height: auto;
+    padding: 20px;
+  }
+
+  form {
+    width: 100%;
+    max-width: none;
+  }
+
+  .button-container {
+    flex-direction: column;
+  }
+
+  .btn {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+
+
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+  .card {
+    padding: 20px;
+  }
+
+  .btn {
+    margin-bottom: 10px;
+  }
+}

@@ -1,27 +1,48 @@
-# MySalaryCalculator
+# Monthly Inhand Salary Calculator
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+This is an Angular-based application which allows users to calculate their monthly in-hand salary. The project aims to provide an intuitive user interface to make salary calculations simple and efficient.
 
-## Development server
+## Demo Link <br>
+https://monthlyinhandsalary.netlify.app/
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Table of Contents
 
-## Code scaffolding
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Features](#features)
+4. [Contribution](#contribution)
+5. [License](#license)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation
 
-## Build
+Before you start, make sure you have a functional [NodeJS environment](https://nodejs.org/en/download/) with npm and [Angular CLI](https://cli.angular.io/). 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+From the command line:
 
-## Running unit tests
+1. Clone the repo: `git clone https://github.com/USERNAME/REPO_NAME.git`
+2. Go into the repository: `cd REPO_NAME`
+3. Install the application: `npm install`
+4. Start the server: `ng serve`
+5. Open the application at `http://localhost:4200`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Usage
 
-## Running end-to-end tests
+To use the application:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Open the application URL in a web browser.
+2. Input your gross salary and any deductions.
+3. Click on "Calculate" to receive the calculated net in-hand salary.
 
-## Further help
+## Features
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- User-friendly interface to input gross salary and deductions.
+- Calculate the monthly in-hand salary.
+- Get real-time calculations with instant input field validation.
+
+## Contribution
+
+Contributions are always welcome! Please read the [contribution guidelines](CONTRIBUTING.md) first.
+
+## License
+
+For more information, please see [LICENSE](LICENSE.md).

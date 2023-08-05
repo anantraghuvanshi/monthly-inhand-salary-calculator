@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+.header, .navbar {
+  font-family: 'Roboto', sans-serif;
+  background-image: linear-gradient(-60deg, #d3e0f3 0%, #b3d3f9 50%, #93c7ff 100%);
+  background-size: 200% 200%;
+  animation: gradient 3s ease-in-out infinite;
+  border-bottom: 1px solid #ccc;
+}
+
+.navbar {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.navbar-brand {
+  color: #3A7BD5;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 0;
+  margin-right: 2rem; 
+}
+
+.navbar-nav .nav-link {
+  color: #3A7BD5;
+  font-size: 16px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #FFFFFF;
+}
+.container-fluid{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.github-icon {
+  color: #3A7BD5;
+  font-size: 22px;
+}
+
+.star-count {
+  color: #3A7BD5;
+  font-size: 16px;
+}
+.nav-about {
+  color: #3A7BD5;
+  font-size: 16px;
+  text-decoration: none;
+}
+.nav-feedback {
+  color: #3A7BD5;
+  font-size: 16px;
+  text-decoration: none;
+  margin-left: 10px;
+}
+.second-part{
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-brand {
+    font-size: 16px;
+  }
+
+  .navbar-brand .second-part::before {
+    content: "\A";
+    white-space: pre;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 14px;
+  }
+
+  .github-icon {
+    font-size: 18px;
+  }
+
+  .star-count {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+  .navbar-brand {
+    font-size: 18px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 15px;
+  }
+
+  .github-icon {
+    font-size: 20px;
+  }
+
+  .star-count {
+    font-size: 15px;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.fas {
+  margin-right: 5px;
+  transition: 0.3s;
+}
+
+.fas:hover {
+  transform: rotate(360deg); 
+}
+
+.github-icon:hover {
+  color: #000000; 
+}
+
+.star-count:hover{
+  color: #000000;
+}

@@ -1,0 +1,25 @@
+<app-header></app-header>
+<div class="about">
+  <h1>PROBLEM STATEMENT</h1>
+  <p>
+    What are the results you get when you search for Monthly Inhand Salary
+    Calculator on your favorite search engine? Those bogus pages right where
+    they tell you salary based on your CTC(Cost to Company) and all the
+    different component which you never heard of. To make this process easy for
+    you, we have come up with this Monthly Inhand Salary Calculator which only
+    takes base pay and PF as input and tells your estimated Inhand Salary.
+  </p>
+
+  <div class="collaborators">
+    <h1>COLLABORATORS</h1>
+    <ng-container *ngFor="let collaborator of collaborators">
+      <div class="collaborator-container">
+        <span class="collaborator-name">{{ collaborator }}</span>
+        <a href="https://github.com/{{ collaborator }}" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<app-footer></app-footer>
