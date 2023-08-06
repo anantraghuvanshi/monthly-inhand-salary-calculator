@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
 .card {
   display: flex;
@@ -6,10 +6,10 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background: #d3e0f3;
   background-image: linear-gradient(to bottom, #d3e0f3, #b3d3f9, #93c7ff);
-  color: #3A7BD5;
+  color: #3a7bd5;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -18,9 +18,9 @@ h1 {
   font-weight: 700;
   text-align: center;
   margin-bottom: 2rem;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 10px;
-  border-radius: 5px; 
+  border-radius: 5px;
 }
 
 form {
@@ -35,7 +35,7 @@ form {
 .form-control {
   width: 100%;
   margin-bottom: 1.5rem;
-  background:#5392f8;
+  background: #5392f8;
   border: #333;
   border-radius: 12px;
 }
@@ -45,23 +45,23 @@ input[type="number"] {
   padding: 10px;
   border: none;
   border-radius: 5px;
-  background: #E8F0FE; 
+  background: #e8f0fe;
   color: #333;
   font-weight: bold;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: transform .3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 input[type="number"]:focus {
   outline: none;
   transform: scale(1.02);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 input[type="number"]::placeholder {
   color: #999;
   font-weight: 500;
-  opacity: 1; 
+  opacity: 1;
 }
 
 input[type="radio"] {
@@ -71,7 +71,7 @@ input[type="radio"] {
 input[type="radio"] + label {
   color: #062a5e;
   font-weight: 500;
-  transition: color .3s ease;
+  transition: color 0.3s ease;
   cursor: pointer;
   margin-right: 10px;
   margin-left: 10px;
@@ -82,7 +82,7 @@ input[type="radio"]:checked + label {
   background-color: #535966;
   padding: 5px 10px;
   border-radius: 5px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .button-container {
@@ -133,7 +133,7 @@ input[type="radio"]:checked + label {
   color: #333;
 }
 .error-message {
-  color: #a50f15; 
+  color: #a50f15;
   font-size: 12px;
   margin-top: 5px;
   text-align: right;
@@ -141,7 +141,7 @@ input[type="radio"]:checked + label {
 }
 .fa-info-circle {
   margin-left: 5px;
-  color: #3A7BD5;
+  color: #3a7bd5;
   cursor: pointer;
 }
 .report-issue {

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { WelcomeComponent } from '../welcome-page/welcome-page.component';
 import { DialogComponentComponent } from '../dialog-component/dialog-component.component';
 import { MatDialog } from '@angular/material/dialog';
